@@ -1,0 +1,446 @@
+//
+// Written by Synplify Pro 
+// Product Version "Q-2020.03M-SP1"
+// Program "Synplify Pro", Mapper "map202003act, Build 160R"
+// Tue Feb  2 22:37:22 2021
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/generic/acg5.v "
+// file 1 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/hypermods.v "
+// file 2 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/umr_capim.v "
+// file 3 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/scemi_objects.v "
+// file 4 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/scemi_pipes.svh "
+// file 5 "\/home/hpcse/work/ex6/component/polarfire_syn_comps.v "
+// file 6 "\/home/hpcse/work/ex6/hdl/c880g.v "
+// file 7 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/nlconst.dat "
+// file 8 "\/home/hpcse/work/ex6/designer/c880g/synthesis.fdc "
+
+`timescale 100 ps/100 ps
+module c880g (
+  L1gat,
+  L8gat,
+  L13gat,
+  L17gat,
+  L26gat,
+  L29gat,
+  L36gat,
+  L42gat,
+  L51gat,
+  L55gat,
+  L59gat,
+  L68gat,
+  L72gat,
+  L73gat,
+  L74gat,
+  L75gat,
+  L80gat,
+  L85gat,
+  L86gat,
+  L87gat,
+  L88gat,
+  L89gat,
+  L90gat,
+  L91gat,
+  L96gat,
+  L101gat,
+  L106gat,
+  L111gat,
+  L116gat,
+  L121gat,
+  L126gat,
+  L130gat,
+  L135gat,
+  L138gat,
+  L143gat,
+  L146gat,
+  L149gat,
+  L152gat,
+  L153gat,
+  L156gat,
+  L159gat,
+  L165gat,
+  L171gat,
+  L177gat,
+  L183gat,
+  L189gat,
+  L195gat,
+  L201gat,
+  L207gat,
+  L210gat,
+  L219gat,
+  L228gat,
+  L237gat,
+  L246gat,
+  L255gat,
+  L259gat,
+  L260gat,
+  L261gat,
+  L267gat,
+  L268gat,
+  L388gat,
+  L389gat,
+  L390gat,
+  L391gat,
+  L418gat,
+  L419gat,
+  L420gat,
+  L421gat,
+  L422gat,
+  L423gat,
+  L446gat,
+  L447gat,
+  L448gat,
+  L449gat,
+  L450gat,
+  L767gat,
+  L768gat,
+  L850gat,
+  L863gat,
+  L864gat,
+  L865gat,
+  L866gat,
+  L874gat,
+  L878gat,
+  L879gat,
+  L880gat
+)
+;
+input L1gat ;
+input L8gat ;
+input L13gat ;
+input L17gat ;
+input L26gat ;
+input L29gat ;
+input L36gat ;
+input L42gat ;
+input L51gat ;
+input L55gat ;
+input L59gat ;
+input L68gat ;
+input L72gat ;
+input L73gat ;
+input L74gat ;
+input L75gat ;
+input L80gat ;
+input L85gat ;
+input L86gat ;
+input L87gat ;
+input L88gat ;
+input L89gat ;
+input L90gat ;
+input L91gat ;
+input L96gat ;
+input L101gat ;
+input L106gat ;
+input L111gat ;
+input L116gat ;
+input L121gat ;
+input L126gat ;
+input L130gat ;
+input L135gat ;
+input L138gat ;
+input L143gat ;
+input L146gat ;
+input L149gat ;
+input L152gat ;
+input L153gat ;
+input L156gat ;
+input L159gat ;
+input L165gat ;
+input L171gat ;
+input L177gat ;
+input L183gat ;
+input L189gat ;
+input L195gat ;
+input L201gat ;
+input L207gat ;
+input L210gat ;
+input L219gat ;
+input L228gat ;
+input L237gat ;
+input L246gat ;
+input L255gat ;
+input L259gat ;
+input L260gat ;
+input L261gat ;
+input L267gat ;
+input L268gat ;
+output L388gat ;
+output L389gat ;
+output L390gat ;
+output L391gat ;
+output L418gat ;
+output L419gat ;
+output L420gat ;
+output L421gat ;
+output L422gat ;
+output L423gat ;
+output L446gat ;
+output L447gat ;
+output L448gat ;
+output L449gat ;
+output L450gat ;
+output L767gat ;
+output L768gat ;
+output L850gat ;
+output L863gat ;
+output L864gat ;
+output L865gat ;
+output L866gat ;
+output L874gat ;
+output L878gat ;
+output L879gat ;
+output L880gat ;
+wire L1gat ;
+wire L8gat ;
+wire L13gat ;
+wire L17gat ;
+wire L26gat ;
+wire L29gat ;
+wire L36gat ;
+wire L42gat ;
+wire L51gat ;
+wire L55gat ;
+wire L59gat ;
+wire L68gat ;
+wire L72gat ;
+wire L73gat ;
+wire L74gat ;
+wire L75gat ;
+wire L80gat ;
+wire L85gat ;
+wire L86gat ;
+wire L87gat ;
+wire L88gat ;
+wire L89gat ;
+wire L90gat ;
+wire L91gat ;
+wire L96gat ;
+wire L101gat ;
+wire L106gat ;
+wire L111gat ;
+wire L116gat ;
+wire L121gat ;
+wire L126gat ;
+wire L130gat ;
+wire L135gat ;
+wire L138gat ;
+wire L143gat ;
+wire L146gat ;
+wire L149gat ;
+wire L152gat ;
+wire L153gat ;
+wire L156gat ;
+wire L159gat ;
+wire L165gat ;
+wire L171gat ;
+wire L177gat ;
+wire L183gat ;
+wire L189gat ;
+wire L195gat ;
+wire L201gat ;
+wire L207gat ;
+wire L210gat ;
+wire L219gat ;
+wire L228gat ;
+wire L237gat ;
+wire L246gat ;
+wire L255gat ;
+wire L259gat ;
+wire L260gat ;
+wire L261gat ;
+wire L267gat ;
+wire L268gat ;
+wire L388gat ;
+wire L389gat ;
+wire L390gat ;
+wire L391gat ;
+wire L418gat ;
+wire L419gat ;
+wire L420gat ;
+wire L421gat ;
+wire L422gat ;
+wire L423gat ;
+wire L446gat ;
+wire L447gat ;
+wire L448gat ;
+wire L449gat ;
+wire L450gat ;
+wire L767gat ;
+wire L768gat ;
+wire L850gat ;
+wire L863gat ;
+wire L864gat ;
+wire L865gat ;
+wire L866gat ;
+wire L874gat ;
+wire L878gat ;
+wire L879gat ;
+wire L880gat ;
+wire GND ;
+wire VCC ;
+// @6:21
+  TRIBUFF L388gat_obuft (
+	.PAD(L388gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:21
+  TRIBUFF L389gat_obuft (
+	.PAD(L389gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:21
+  TRIBUFF L390gat_obuft (
+	.PAD(L390gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:21
+  TRIBUFF L391gat_obuft (
+	.PAD(L391gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:21
+  TRIBUFF L418gat_obuft (
+	.PAD(L418gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:21
+  TRIBUFF L419gat_obuft (
+	.PAD(L419gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:21
+  TRIBUFF L420gat_obuft (
+	.PAD(L420gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:21
+  TRIBUFF L421gat_obuft (
+	.PAD(L421gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:22
+  TRIBUFF L422gat_obuft (
+	.PAD(L422gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:22
+  TRIBUFF L423gat_obuft (
+	.PAD(L423gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:22
+  TRIBUFF L446gat_obuft (
+	.PAD(L446gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:22
+  TRIBUFF L447gat_obuft (
+	.PAD(L447gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:22
+  TRIBUFF L448gat_obuft (
+	.PAD(L448gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:22
+  TRIBUFF L449gat_obuft (
+	.PAD(L449gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:22
+  TRIBUFF L450gat_obuft (
+	.PAD(L450gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:22
+  TRIBUFF L767gat_obuft (
+	.PAD(L767gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:23
+  TRIBUFF L768gat_obuft (
+	.PAD(L768gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:23
+  TRIBUFF L850gat_obuft (
+	.PAD(L850gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:23
+  TRIBUFF L863gat_obuft (
+	.PAD(L863gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:23
+  TRIBUFF L864gat_obuft (
+	.PAD(L864gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:23
+  TRIBUFF L865gat_obuft (
+	.PAD(L865gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:23
+  TRIBUFF L866gat_obuft (
+	.PAD(L866gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:23
+  TRIBUFF L874gat_obuft (
+	.PAD(L874gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:23
+  TRIBUFF L878gat_obuft (
+	.PAD(L878gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:24
+  TRIBUFF L879gat_obuft (
+	.PAD(L879gat),
+	.D(GND),
+	.E(GND)
+);
+// @6:24
+  TRIBUFF L880gat_obuft (
+	.PAD(L880gat),
+	.D(GND),
+	.E(GND)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* c880g */
+

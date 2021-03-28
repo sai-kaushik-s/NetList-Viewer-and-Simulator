@@ -1,0 +1,111 @@
+//
+// Written by Synplify Pro 
+// Product Version "Q-2020.03M-SP1"
+// Program "Synplify Pro", Mapper "map202003act, Build 160R"
+// Tue Feb  2 19:47:23 2021
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/generic/acg5.v "
+// file 1 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/hypermods.v "
+// file 2 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/umr_capim.v "
+// file 3 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/scemi_objects.v "
+// file 4 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/scemi_pipes.svh "
+// file 5 "\/home/hpcse/work/ex5/component/polarfire_syn_comps.v "
+// file 6 "\/home/hpcse/work/ex5/hdl/c17.v "
+// file 7 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/nlconst.dat "
+// file 8 "\/home/hpcse/work/ex5/designer/c17/synthesis.fdc "
+
+`timescale 100 ps/100 ps
+module c17 (
+  N1,
+  N2,
+  N3,
+  N6,
+  N7,
+  N22,
+  N23
+)
+;
+input N1 ;
+input N2 ;
+input N3 ;
+input N6 ;
+input N7 ;
+output N22 ;
+output N23 ;
+wire N1 ;
+wire N2 ;
+wire N3 ;
+wire N6 ;
+wire N7 ;
+wire N22 ;
+wire N23 ;
+wire GND ;
+wire VCC ;
+wire N1_c ;
+wire N2_c ;
+wire N3_c ;
+wire N6_c ;
+wire N7_c ;
+wire un1_N16_i ;
+wire un1_N10_i ;
+// @6:10
+  INBUF N1_ibuf (
+	.Y(N1_c),
+	.PAD(N1)
+);
+// @6:10
+  INBUF N2_ibuf (
+	.Y(N2_c),
+	.PAD(N2)
+);
+// @6:10
+  INBUF N3_ibuf (
+	.Y(N3_c),
+	.PAD(N3)
+);
+// @6:10
+  INBUF N6_ibuf (
+	.Y(N6_c),
+	.PAD(N6)
+);
+// @6:10
+  INBUF N7_ibuf (
+	.Y(N7_c),
+	.PAD(N7)
+);
+// @6:12
+  OUTBUF N22_obuf (
+	.PAD(N22),
+	.D(un1_N10_i)
+);
+// @6:12
+  OUTBUF N23_obuf (
+	.PAD(N23),
+	.D(un1_N16_i)
+);
+  CFG4 N22_obuf_RNO (
+	.A(N6_c),
+	.B(N3_c),
+	.C(N2_c),
+	.D(N1_c),
+	.Y(un1_N10_i)
+);
+defparam N22_obuf_RNO.INIT=16'hFC70;
+  CFG4 N23_obuf_RNO (
+	.A(N7_c),
+	.B(N6_c),
+	.C(N3_c),
+	.D(N2_c),
+	.Y(un1_N16_i)
+);
+defparam N23_obuf_RNO.INIT=16'h3F2A;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* c17 */
+

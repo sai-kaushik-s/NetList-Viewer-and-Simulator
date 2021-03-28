@@ -1,0 +1,3574 @@
+//
+// Written by Synplify Pro 
+// Product Version "Q-2020.03M-SP1"
+// Program "Synplify Pro", Mapper "map202003act, Build 160R"
+// Tue Feb  2 21:14:11 2021
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/generic/acg5.v "
+// file 1 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/hypermods.v "
+// file 2 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/umr_capim.v "
+// file 3 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/scemi_objects.v "
+// file 4 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/vlog/scemi_pipes.svh "
+// file 5 "\/home/hpcse/work/ex7/component/polarfire_syn_comps.v "
+// file 6 "\/home/hpcse/work/ex7/hdl/c2670a.v "
+// file 7 "\/usr/local/microsemi/Libero_SoC_v12.6/SynplifyPro/lib/nlconst.dat "
+// file 8 "\/home/hpcse/work/ex7/designer/c2670/synthesis.fdc "
+
+`timescale 100 ps/100 ps
+module c2670 (
+  G1,
+  G10,
+  G100,
+  G101,
+  G102,
+  G103,
+  G104,
+  G105,
+  G106,
+  G107,
+  G108,
+  G109,
+  G11,
+  G110,
+  G111,
+  G112,
+  G113,
+  G114,
+  G115,
+  G116,
+  G117,
+  G118,
+  G119,
+  G12,
+  G120,
+  G121,
+  G122,
+  G123,
+  G124,
+  G125,
+  G126,
+  G127,
+  G128,
+  G129,
+  G13,
+  G130,
+  G131,
+  G132,
+  G133,
+  G134,
+  G135,
+  G136,
+  G137,
+  G138,
+  G139,
+  G14,
+  G140,
+  G141,
+  G142,
+  G143,
+  G144,
+  G145,
+  G146,
+  G147,
+  G148,
+  G149,
+  G15,
+  G150,
+  G151,
+  G152,
+  G153,
+  G154,
+  G155,
+  G156,
+  G157,
+  G16,
+  G17,
+  G18,
+  G19,
+  G2,
+  G20,
+  G21,
+  G22,
+  G23,
+  G24,
+  G25,
+  G2531,
+  G2532,
+  G2533,
+  G2534,
+  G2535,
+  G2536,
+  G2537,
+  G2538,
+  G2539,
+  G2540,
+  G2541,
+  G2542,
+  G2543,
+  G2544,
+  G2545,
+  G2546,
+  G2547,
+  G2548,
+  G2549,
+  G2550,
+  G2551,
+  G2552,
+  G2553,
+  G2554,
+  G2555,
+  G2556,
+  G2557,
+  G2558,
+  G2559,
+  G2560,
+  G2561,
+  G2562,
+  G2563,
+  G2564,
+  G2565,
+  G2566,
+  G2567,
+  G2568,
+  G2569,
+  G2570,
+  G2571,
+  G2572,
+  G2573,
+  G2574,
+  G2575,
+  G2576,
+  G2577,
+  G2578,
+  G2579,
+  G2580,
+  G2581,
+  G2582,
+  G2583,
+  G2584,
+  G2585,
+  G2586,
+  G2587,
+  G2588,
+  G2589,
+  G2590,
+  G2591,
+  G2592,
+  G2593,
+  G2594,
+  G26,
+  G27,
+  G28,
+  G29,
+  G3,
+  G30,
+  G31,
+  G32,
+  G33,
+  G34,
+  G35,
+  G36,
+  G37,
+  G38,
+  G39,
+  G4,
+  G40,
+  G41,
+  G42,
+  G43,
+  G44,
+  G45,
+  G46,
+  G47,
+  G48,
+  G49,
+  G5,
+  G50,
+  G51,
+  G52,
+  G53,
+  G54,
+  G55,
+  G56,
+  G57,
+  G58,
+  G59,
+  G6,
+  G60,
+  G61,
+  G62,
+  G63,
+  G64,
+  G65,
+  G66,
+  G67,
+  G68,
+  G69,
+  G7,
+  G70,
+  G71,
+  G72,
+  G73,
+  G74,
+  G75,
+  G76,
+  G77,
+  G78,
+  G79,
+  G8,
+  G80,
+  G81,
+  G82,
+  G83,
+  G84,
+  G85,
+  G86,
+  G87,
+  G88,
+  G89,
+  G9,
+  G90,
+  G91,
+  G92,
+  G93,
+  G94,
+  G95,
+  G96,
+  G97,
+  G98,
+  G99
+)
+;
+input G1 ;
+input G10 ;
+input G100 ;
+input G101 ;
+input G102 ;
+input G103 ;
+input G104 ;
+input G105 ;
+input G106 ;
+input G107 ;
+input G108 ;
+input G109 ;
+input G11 ;
+input G110 ;
+input G111 ;
+input G112 ;
+input G113 ;
+input G114 ;
+input G115 ;
+input G116 ;
+input G117 ;
+input G118 ;
+input G119 ;
+input G12 ;
+input G120 ;
+input G121 ;
+input G122 ;
+input G123 ;
+input G124 ;
+input G125 ;
+input G126 ;
+input G127 ;
+input G128 ;
+input G129 ;
+input G13 ;
+input G130 ;
+input G131 ;
+input G132 ;
+input G133 ;
+input G134 ;
+input G135 ;
+input G136 ;
+input G137 ;
+input G138 ;
+input G139 ;
+input G14 ;
+input G140 ;
+input G141 ;
+input G142 ;
+input G143 ;
+input G144 ;
+input G145 ;
+input G146 ;
+input G147 ;
+input G148 ;
+input G149 ;
+input G15 ;
+input G150 ;
+input G151 ;
+input G152 ;
+input G153 ;
+input G154 ;
+input G155 ;
+input G156 ;
+input G157 ;
+input G16 ;
+input G17 ;
+input G18 ;
+input G19 ;
+input G2 ;
+input G20 ;
+input G21 ;
+input G22 ;
+input G23 ;
+input G24 ;
+input G25 ;
+output G2531 ;
+output G2532 ;
+output G2533 ;
+output G2534 ;
+output G2535 ;
+output G2536 ;
+output G2537 ;
+output G2538 ;
+output G2539 ;
+output G2540 ;
+output G2541 ;
+output G2542 ;
+output G2543 ;
+output G2544 ;
+output G2545 ;
+output G2546 ;
+output G2547 ;
+output G2548 ;
+output G2549 ;
+output G2550 ;
+output G2551 ;
+output G2552 ;
+output G2553 ;
+output G2554 ;
+output G2555 ;
+output G2556 ;
+output G2557 ;
+output G2558 ;
+output G2559 ;
+output G2560 ;
+output G2561 ;
+output G2562 ;
+output G2563 ;
+output G2564 ;
+output G2565 ;
+output G2566 ;
+output G2567 ;
+output G2568 ;
+output G2569 ;
+output G2570 ;
+output G2571 ;
+output G2572 ;
+output G2573 ;
+output G2574 ;
+output G2575 ;
+output G2576 ;
+output G2577 ;
+output G2578 ;
+output G2579 ;
+output G2580 ;
+output G2581 ;
+output G2582 ;
+output G2583 ;
+output G2584 ;
+output G2585 ;
+output G2586 ;
+output G2587 ;
+output G2588 ;
+output G2589 ;
+output G2590 ;
+output G2591 ;
+output G2592 ;
+output G2593 ;
+output G2594 ;
+input G26 ;
+input G27 ;
+input G28 ;
+input G29 ;
+input G3 ;
+input G30 ;
+input G31 ;
+input G32 ;
+input G33 ;
+input G34 ;
+input G35 ;
+input G36 ;
+input G37 ;
+input G38 ;
+input G39 ;
+input G4 ;
+input G40 ;
+input G41 ;
+input G42 ;
+input G43 ;
+input G44 ;
+input G45 ;
+input G46 ;
+input G47 ;
+input G48 ;
+input G49 ;
+input G5 ;
+input G50 ;
+input G51 ;
+input G52 ;
+input G53 ;
+input G54 ;
+input G55 ;
+input G56 ;
+input G57 ;
+input G58 ;
+input G59 ;
+input G6 ;
+input G60 ;
+input G61 ;
+input G62 ;
+input G63 ;
+input G64 ;
+input G65 ;
+input G66 ;
+input G67 ;
+input G68 ;
+input G69 ;
+input G7 ;
+input G70 ;
+input G71 ;
+input G72 ;
+input G73 ;
+input G74 ;
+input G75 ;
+input G76 ;
+input G77 ;
+input G78 ;
+input G79 ;
+input G8 ;
+input G80 ;
+input G81 ;
+input G82 ;
+input G83 ;
+input G84 ;
+input G85 ;
+input G86 ;
+input G87 ;
+input G88 ;
+input G89 ;
+input G9 ;
+input G90 ;
+input G91 ;
+input G92 ;
+input G93 ;
+input G94 ;
+input G95 ;
+input G96 ;
+input G97 ;
+input G98 ;
+input G99 ;
+wire G1 ;
+wire G10 ;
+wire G100 ;
+wire G101 ;
+wire G102 ;
+wire G103 ;
+wire G104 ;
+wire G105 ;
+wire G106 ;
+wire G107 ;
+wire G108 ;
+wire G109 ;
+wire G11 ;
+wire G110 ;
+wire G111 ;
+wire G112 ;
+wire G113 ;
+wire G114 ;
+wire G115 ;
+wire G116 ;
+wire G117 ;
+wire G118 ;
+wire G119 ;
+wire G12 ;
+wire G120 ;
+wire G121 ;
+wire G122 ;
+wire G123 ;
+wire G124 ;
+wire G125 ;
+wire G126 ;
+wire G127 ;
+wire G128 ;
+wire G129 ;
+wire G13 ;
+wire G130 ;
+wire G131 ;
+wire G132 ;
+wire G133 ;
+wire G134 ;
+wire G135 ;
+wire G136 ;
+wire G137 ;
+wire G138 ;
+wire G139 ;
+wire G14 ;
+wire G140 ;
+wire G141 ;
+wire G142 ;
+wire G143 ;
+wire G144 ;
+wire G145 ;
+wire G146 ;
+wire G147 ;
+wire G148 ;
+wire G149 ;
+wire G15 ;
+wire G150 ;
+wire G151 ;
+wire G152 ;
+wire G153 ;
+wire G154 ;
+wire G155 ;
+wire G156 ;
+wire G157 ;
+wire G16 ;
+wire G17 ;
+wire G18 ;
+wire G19 ;
+wire G2 ;
+wire G20 ;
+wire G21 ;
+wire G22 ;
+wire G23 ;
+wire G24 ;
+wire G25 ;
+wire G2531 ;
+wire G2532 ;
+wire G2533 ;
+wire G2534 ;
+wire G2535 ;
+wire G2536 ;
+wire G2537 ;
+wire G2538 ;
+wire G2539 ;
+wire G2540 ;
+wire G2541 ;
+wire G2542 ;
+wire G2543 ;
+wire G2544 ;
+wire G2545 ;
+wire G2546 ;
+wire G2547 ;
+wire G2548 ;
+wire G2549 ;
+wire G2550 ;
+wire G2551 ;
+wire G2552 ;
+wire G2553 ;
+wire G2554 ;
+wire G2555 ;
+wire G2556 ;
+wire G2557 ;
+wire G2558 ;
+wire G2559 ;
+wire G2560 ;
+wire G2561 ;
+wire G2562 ;
+wire G2563 ;
+wire G2564 ;
+wire G2565 ;
+wire G2566 ;
+wire G2567 ;
+wire G2568 ;
+wire G2569 ;
+wire G2570 ;
+wire G2571 ;
+wire G2572 ;
+wire G2573 ;
+wire G2574 ;
+wire G2575 ;
+wire G2576 ;
+wire G2577 ;
+wire G2578 ;
+wire G2579 ;
+wire G2580 ;
+wire G2581 ;
+wire G2582 ;
+wire G2583 ;
+wire G2584 ;
+wire G2585 ;
+wire G2586 ;
+wire G2587 ;
+wire G2588 ;
+wire G2589 ;
+wire G2590 ;
+wire G2591 ;
+wire G2592 ;
+wire G2593 ;
+wire G2594 ;
+wire G26 ;
+wire G27 ;
+wire G28 ;
+wire G29 ;
+wire G3 ;
+wire G30 ;
+wire G31 ;
+wire G32 ;
+wire G33 ;
+wire G34 ;
+wire G35 ;
+wire G36 ;
+wire G37 ;
+wire G38 ;
+wire G39 ;
+wire G4 ;
+wire G40 ;
+wire G41 ;
+wire G42 ;
+wire G43 ;
+wire G44 ;
+wire G45 ;
+wire G46 ;
+wire G47 ;
+wire G48 ;
+wire G49 ;
+wire G5 ;
+wire G50 ;
+wire G51 ;
+wire G52 ;
+wire G53 ;
+wire G54 ;
+wire G55 ;
+wire G56 ;
+wire G57 ;
+wire G58 ;
+wire G59 ;
+wire G6 ;
+wire G60 ;
+wire G61 ;
+wire G62 ;
+wire G63 ;
+wire G64 ;
+wire G65 ;
+wire G66 ;
+wire G67 ;
+wire G68 ;
+wire G69 ;
+wire G7 ;
+wire G70 ;
+wire G71 ;
+wire G72 ;
+wire G73 ;
+wire G74 ;
+wire G75 ;
+wire G76 ;
+wire G77 ;
+wire G78 ;
+wire G79 ;
+wire G8 ;
+wire G80 ;
+wire G81 ;
+wire G82 ;
+wire G83 ;
+wire G84 ;
+wire G85 ;
+wire G86 ;
+wire G87 ;
+wire G88 ;
+wire G89 ;
+wire G9 ;
+wire G90 ;
+wire G91 ;
+wire G92 ;
+wire G93 ;
+wire G94 ;
+wire G95 ;
+wire G96 ;
+wire G97 ;
+wire G98 ;
+wire G99 ;
+wire [0:0] un1_G1008_3_Z;
+wire [0:0] un1_G1144_Z;
+wire [0:0] un1_G1002_2_Z;
+wire [0:0] un1_G1321_Z;
+wire [0:0] un1_G2206_Z;
+wire [0:0] un1_G998_2_Z;
+wire [0:0] un1_G1002_Z;
+wire [0:0] un1_G1044_Z;
+wire [0:0] un1_G1053_Z;
+wire [0:0] un1_G527_1_Z;
+wire [0:0] un1_G530_1_Z;
+wire [0:0] un1_G539_1_Z;
+wire [0:0] un1_G533_Z;
+wire [0:0] un1_G1017_Z;
+wire [0:0] un1_G1026_Z;
+wire [0:0] un1_G536_1_Z;
+wire G993_Z ;
+wire GND ;
+wire VCC ;
+wire G2231_Z ;
+wire un1_G2403_Z ;
+wire G1314_Z ;
+wire G1049_Z ;
+wire G1044_Z ;
+wire G1039_Z ;
+wire G2470_Z ;
+wire G2337_Z ;
+wire G1802_Z ;
+wire un1_G2044_Z ;
+wire un1_G1467_Z ;
+wire G1053 ;
+wire G1072 ;
+wire G1067 ;
+wire G1409_Z ;
+wire G2424_2_Z ;
+wire G1_c ;
+wire G10_c ;
+wire G100_c ;
+wire G101_c ;
+wire G102_c ;
+wire G103_c ;
+wire G104_c ;
+wire G105_c ;
+wire G106_c ;
+wire G107_c ;
+wire G108_c ;
+wire G109_c ;
+wire G11_c ;
+wire G110_c ;
+wire G111_c ;
+wire G112_c ;
+wire G113_c ;
+wire G114_c ;
+wire G115_c ;
+wire G116_c ;
+wire G117_c ;
+wire G118_c ;
+wire G119_c ;
+wire G12_c ;
+wire G120_c ;
+wire G121_c ;
+wire G122_c ;
+wire G123_c ;
+wire G124_c ;
+wire G125_c ;
+wire G126_c ;
+wire G127_c ;
+wire G128_c ;
+wire G129_c ;
+wire G13_c ;
+wire G130_c ;
+wire G131_c ;
+wire G132_c ;
+wire G133_c ;
+wire G134_c ;
+wire G135_c ;
+wire G136_c ;
+wire G137_c ;
+wire G138_c ;
+wire G139_c ;
+wire G14_c ;
+wire G140_c ;
+wire G141_c ;
+wire G142_c ;
+wire G143_c ;
+wire G144_c ;
+wire G145_c ;
+wire G146_c ;
+wire G147_c ;
+wire G148_c ;
+wire G149_c ;
+wire G15_c ;
+wire G150_c ;
+wire G151_c ;
+wire G152_c ;
+wire G153_c ;
+wire G154_c ;
+wire G155_c ;
+wire G156_c ;
+wire G157_c ;
+wire G16_c ;
+wire G17_c ;
+wire G18_c ;
+wire G19_c ;
+wire G2_c ;
+wire G20_c ;
+wire G21_c ;
+wire G22_c ;
+wire G23_c ;
+wire G24_c ;
+wire G25_c ;
+wire G26_c ;
+wire G27_c ;
+wire G28_c ;
+wire G29_c ;
+wire G3_c ;
+wire G30_c ;
+wire G31_c ;
+wire G32_c ;
+wire G33_c ;
+wire G34_c ;
+wire G35_c ;
+wire G36_c ;
+wire G37_c ;
+wire G38_c ;
+wire G39_c ;
+wire G4_c ;
+wire G40_c ;
+wire G41_c ;
+wire G42_c ;
+wire G43_c ;
+wire G44_c ;
+wire G45_c ;
+wire G46_c ;
+wire G47_c ;
+wire G48_c ;
+wire G49_c ;
+wire G5_c ;
+wire G50_c ;
+wire G51_c ;
+wire G52_c ;
+wire G53_c ;
+wire G54_c ;
+wire G55_c ;
+wire G56_c ;
+wire G57_c ;
+wire G58_c ;
+wire G59_c ;
+wire G6_c ;
+wire G60_c ;
+wire G61_c ;
+wire G62_c ;
+wire G63_c ;
+wire G64_c ;
+wire G65_c ;
+wire G66_c ;
+wire G67_c ;
+wire G68_c ;
+wire G69_c ;
+wire G7_c ;
+wire G70_c ;
+wire G71_c ;
+wire G72_c ;
+wire G73_c ;
+wire G74_c ;
+wire G75_c ;
+wire G76_c ;
+wire G77_c ;
+wire G78_c ;
+wire G79_c ;
+wire G8_c ;
+wire G80_c ;
+wire G81_c ;
+wire G82_c ;
+wire G83_c ;
+wire G84_c ;
+wire G85_c ;
+wire G86_c ;
+wire G87_c ;
+wire G88_c ;
+wire G89_c ;
+wire G9_c ;
+wire G90_c ;
+wire G91_c ;
+wire G92_c ;
+wire G93_c ;
+wire G94_c ;
+wire G95_c ;
+wire G96_c ;
+wire G97_c ;
+wire G98_c ;
+wire G99_c ;
+wire G2550_c ;
+wire G2563_c ;
+wire G2566_c ;
+wire G2567_c ;
+wire G2568_c ;
+wire G2569_c ;
+wire G2570_c ;
+wire G2571_c ;
+wire G2572_c ;
+wire G2582_c ;
+wire G2583_c ;
+wire un1_G1453_Z ;
+wire G2423_Z ;
+wire un1_G1871_Z ;
+wire G1076 ;
+wire G2425_Z ;
+wire un1_G1869_Z ;
+wire G2427_2_Z ;
+wire G2479_Z ;
+wire G2486_Z ;
+wire G2492_Z ;
+wire G2500_Z ;
+wire G2424_Z ;
+wire G2023_Z ;
+wire G998 ;
+wire un1_G283_Z ;
+wire un1_G1858_Z ;
+wire un1_G2209_Z ;
+wire un1_G1599_Z ;
+wire un1_G1651_Z ;
+wire G1008 ;
+wire G2466_Z ;
+wire G1903_Z ;
+wire un1_G925_Z ;
+wire un1_G927_Z ;
+wire un1_G130_Z ;
+wire un1_G132_Z ;
+wire un1_G1220_Z ;
+wire G1062 ;
+wire N_30 ;
+wire un1_G1112_Z ;
+wire G339_Z ;
+wire G336_Z ;
+wire un1_G1964_Z ;
+wire un1_G2207_Z ;
+wire G2425_0_Z ;
+wire G2478_0_Z ;
+wire G2478_1_Z ;
+wire G2486_0_Z ;
+wire G2492_0_Z ;
+wire G2492_1_Z ;
+wire G2500_1_Z ;
+wire G2505_2_Z ;
+wire G2569_0_Z ;
+wire G2569_1_Z ;
+wire G1884_1_Z ;
+wire G1884_2_Z ;
+wire G1884_3_Z ;
+wire G1884_4_Z ;
+wire G1884_5_Z ;
+wire G1884_6_Z ;
+wire G1884_7_Z ;
+wire G1884_8_Z ;
+wire G1884_9_Z ;
+wire G1884_11_Z ;
+wire G1884_17_Z ;
+wire G1884_23_Z ;
+wire G1884_24_Z ;
+wire G1884_25_Z ;
+wire G1884_26_Z ;
+wire G1884_27_Z ;
+wire G1884_28_Z ;
+wire G1884_29_Z ;
+wire G2568_0_Z ;
+wire G2568_1_Z ;
+wire G2475_0_Z ;
+wire G2466_1_Z ;
+wire G1002_0_Z ;
+wire G1002_1_Z ;
+wire G2528_3_Z ;
+wire G1079_0_Z ;
+wire G1079_1_Z ;
+wire G1118_0_Z ;
+wire G2567_0_Z ;
+wire G2567_1_Z ;
+wire G2570_0_Z ;
+wire G2528_i ;
+wire G2505_i ;
+wire G1884_i ;
+wire un1_G575_1_i ;
+wire G1119_i ;
+wire G1118_i ;
+wire G595_i ;
+wire G592_i ;
+wire un1_G119_i ;
+wire G443_i ;
+wire G287_i ;
+wire G285_i ;
+wire G86_c_i ;
+wire G43_c_i ;
+wire G96_c_i ;
+wire G53_c_i ;
+wire G76_c_i ;
+wire G64_c_i ;
+wire G106_c_i ;
+wire G32_c_i ;
+wire G137_c_i ;
+wire G124_c_i ;
+wire G115_c_i ;
+wire G2569_c_i ;
+wire G2567_c_i ;
+wire G2568_c_i ;
+wire G1044_1_0_Z ;
+wire G1039_1_0_Z ;
+wire G1049_1_0_Z ;
+wire un1_G1453_1_Z ;
+wire un1_G1251_1_Z ;
+wire G2583_1_0_Z ;
+wire G2427_2_1_0_Z ;
+wire un1_G1964_1_Z ;
+wire G1076_1_0_0_y0 ;
+wire G1076_1_0_0_co0 ;
+wire G1076_1_0_0_wmux_S ;
+wire G1076_1_0_0_co1 ;
+wire G1076_1_0_0_wmux_0_S ;
+wire G998_1_0_0_y0 ;
+wire G998_1_0_0_co0 ;
+wire G998_1_0_0_wmux_S ;
+wire G998_1_0_0_co1 ;
+wire G998_1_0_0_wmux_0_S ;
+wire G2566_1_0_0_y0 ;
+wire G2566_1_0_0_co0 ;
+wire G2566_1_0_0_wmux_S ;
+wire G2566_1_0_0_co1 ;
+wire G2566_1_0_0_wmux_0_S ;
+wire G1008_1_0_0_y0 ;
+wire G1008_1_0_0_co0 ;
+wire G1008_1_0_0_wmux_S ;
+wire G1008_1_0_0_co1 ;
+wire G1008_1_0_0_wmux_0_S ;
+wire G1072_1_0_0_y0 ;
+wire G1072_1_0_0_co0 ;
+wire G1072_1_0_0_wmux_S ;
+wire G1072_1_0_0_co1 ;
+wire G1072_1_0_0_wmux_0_S ;
+wire G1062_1_0_0_y0 ;
+wire G1062_1_0_0_co0 ;
+wire G1062_1_0_0_wmux_S ;
+wire G1062_1_0_0_co1 ;
+wire G1062_1_0_0_wmux_0_S ;
+wire G2572_1_0_0_y0 ;
+wire G2572_1_0_0_co0 ;
+wire G2572_1_0_0_wmux_S ;
+wire G2572_1_0_0_co1 ;
+wire G2572_1_0_0_wmux_0_S ;
+wire G1067_1_0_0_y0 ;
+wire G1067_1_0_0_co0 ;
+wire G1067_1_0_0_wmux_S ;
+wire G1067_1_0_0_co1 ;
+wire G1067_1_0_0_wmux_0_S ;
+wire G1053_1_0_0_y0 ;
+wire G1053_1_0_0_co0 ;
+wire G1053_1_0_0_wmux_S ;
+wire G1053_1_0_0_co1 ;
+wire G1053_1_0_0_wmux_0_S ;
+wire G2571_1_0_0_y0 ;
+wire G2571_1_0_0_co0 ;
+wire G2571_1_0_0_wmux_S ;
+wire G2571_1_0_0_co1 ;
+wire G2571_1_0_0_wmux_0_S ;
+  CFG1 G115_ibuf_RNI35VC (
+	.A(G115_c),
+	.Y(G115_c_i)
+);
+defparam G115_ibuf_RNI35VC.INIT=2'h1;
+  CFG1 G124_ibuf_RNI3647 (
+	.A(G124_c),
+	.Y(G124_c_i)
+);
+defparam G124_ibuf_RNI3647.INIT=2'h1;
+  CFG1 G137_ibuf_RNI7RHA (
+	.A(G137_c),
+	.Y(G137_c_i)
+);
+defparam G137_ibuf_RNI7RHA.INIT=2'h1;
+  CFG1 G2539_obuf_RNO (
+	.A(G32_c),
+	.Y(G32_c_i)
+);
+defparam G2539_obuf_RNO.INIT=2'h1;
+  CFG1 G2540_obuf_RNO (
+	.A(G106_c),
+	.Y(G106_c_i)
+);
+defparam G2540_obuf_RNO.INIT=2'h1;
+  CFG1 G2541_obuf_RNO (
+	.A(G64_c),
+	.Y(G64_c_i)
+);
+defparam G2541_obuf_RNO.INIT=2'h1;
+  CFG1 G2542_obuf_RNO (
+	.A(G76_c),
+	.Y(G76_c_i)
+);
+defparam G2542_obuf_RNO.INIT=2'h1;
+  CFG1 G2543_obuf_RNO (
+	.A(G53_c),
+	.Y(G53_c_i)
+);
+defparam G2543_obuf_RNO.INIT=2'h1;
+  CFG1 G2544_obuf_RNO (
+	.A(G96_c),
+	.Y(G96_c_i)
+);
+defparam G2544_obuf_RNO.INIT=2'h1;
+  CFG1 G2545_obuf_RNO (
+	.A(G43_c),
+	.Y(G43_c_i)
+);
+defparam G2545_obuf_RNO.INIT=2'h1;
+  CFG1 G2546_obuf_RNO (
+	.A(G86_c),
+	.Y(G86_c_i)
+);
+defparam G2546_obuf_RNO.INIT=2'h1;
+// @6:16
+  INBUF G1_ibuf (
+	.Y(G1_c),
+	.PAD(G1)
+);
+// @6:16
+  INBUF G10_ibuf (
+	.Y(G10_c),
+	.PAD(G10)
+);
+// @6:21
+  INBUF G100_ibuf (
+	.Y(G100_c),
+	.PAD(G100)
+);
+// @6:21
+  INBUF G101_ibuf (
+	.Y(G101_c),
+	.PAD(G101)
+);
+// @6:21
+  INBUF G102_ibuf (
+	.Y(G102_c),
+	.PAD(G102)
+);
+// @6:21
+  INBUF G103_ibuf (
+	.Y(G103_c),
+	.PAD(G103)
+);
+// @6:21
+  INBUF G104_ibuf (
+	.Y(G104_c),
+	.PAD(G104)
+);
+// @6:21
+  INBUF G105_ibuf (
+	.Y(G105_c),
+	.PAD(G105)
+);
+// @6:21
+  INBUF G106_ibuf (
+	.Y(G106_c),
+	.PAD(G106)
+);
+// @6:21
+  INBUF G107_ibuf (
+	.Y(G107_c),
+	.PAD(G107)
+);
+// @6:21
+  INBUF G108_ibuf (
+	.Y(G108_c),
+	.PAD(G108)
+);
+// @6:21
+  INBUF G109_ibuf (
+	.Y(G109_c),
+	.PAD(G109)
+);
+// @6:16
+  INBUF G11_ibuf (
+	.Y(G11_c),
+	.PAD(G11)
+);
+// @6:21
+  INBUF G110_ibuf (
+	.Y(G110_c),
+	.PAD(G110)
+);
+// @6:21
+  INBUF G111_ibuf (
+	.Y(G111_c),
+	.PAD(G111)
+);
+// @6:21
+  INBUF G112_ibuf (
+	.Y(G112_c),
+	.PAD(G112)
+);
+// @6:22
+  INBUF G113_ibuf (
+	.Y(G113_c),
+	.PAD(G113)
+);
+// @6:22
+  INBUF G114_ibuf (
+	.Y(G114_c),
+	.PAD(G114)
+);
+// @6:22
+  INBUF G115_ibuf (
+	.Y(G115_c),
+	.PAD(G115)
+);
+// @6:22
+  INBUF G116_ibuf (
+	.Y(G116_c),
+	.PAD(G116)
+);
+// @6:22
+  INBUF G117_ibuf (
+	.Y(G117_c),
+	.PAD(G117)
+);
+// @6:22
+  INBUF G118_ibuf (
+	.Y(G118_c),
+	.PAD(G118)
+);
+// @6:22
+  INBUF G119_ibuf (
+	.Y(G119_c),
+	.PAD(G119)
+);
+// @6:16
+  INBUF G12_ibuf (
+	.Y(G12_c),
+	.PAD(G12)
+);
+// @6:22
+  INBUF G120_ibuf (
+	.Y(G120_c),
+	.PAD(G120)
+);
+// @6:22
+  INBUF G121_ibuf (
+	.Y(G121_c),
+	.PAD(G121)
+);
+// @6:22
+  INBUF G122_ibuf (
+	.Y(G122_c),
+	.PAD(G122)
+);
+// @6:22
+  INBUF G123_ibuf (
+	.Y(G123_c),
+	.PAD(G123)
+);
+// @6:22
+  INBUF G124_ibuf (
+	.Y(G124_c),
+	.PAD(G124)
+);
+// @6:22
+  INBUF G125_ibuf (
+	.Y(G125_c),
+	.PAD(G125)
+);
+// @6:22
+  INBUF G126_ibuf (
+	.Y(G126_c),
+	.PAD(G126)
+);
+// @6:22
+  INBUF G127_ibuf (
+	.Y(G127_c),
+	.PAD(G127)
+);
+// @6:23
+  INBUF G128_ibuf (
+	.Y(G128_c),
+	.PAD(G128)
+);
+// @6:23
+  INBUF G129_ibuf (
+	.Y(G129_c),
+	.PAD(G129)
+);
+// @6:16
+  INBUF G13_ibuf (
+	.Y(G13_c),
+	.PAD(G13)
+);
+// @6:23
+  INBUF G130_ibuf (
+	.Y(G130_c),
+	.PAD(G130)
+);
+// @6:23
+  INBUF G131_ibuf (
+	.Y(G131_c),
+	.PAD(G131)
+);
+// @6:23
+  INBUF G132_ibuf (
+	.Y(G132_c),
+	.PAD(G132)
+);
+// @6:23
+  INBUF G133_ibuf (
+	.Y(G133_c),
+	.PAD(G133)
+);
+// @6:23
+  INBUF G134_ibuf (
+	.Y(G134_c),
+	.PAD(G134)
+);
+// @6:23
+  INBUF G135_ibuf (
+	.Y(G135_c),
+	.PAD(G135)
+);
+// @6:23
+  INBUF G136_ibuf (
+	.Y(G136_c),
+	.PAD(G136)
+);
+// @6:23
+  INBUF G137_ibuf (
+	.Y(G137_c),
+	.PAD(G137)
+);
+// @6:23
+  INBUF G138_ibuf (
+	.Y(G138_c),
+	.PAD(G138)
+);
+// @6:23
+  INBUF G139_ibuf (
+	.Y(G139_c),
+	.PAD(G139)
+);
+// @6:16
+  INBUF G14_ibuf (
+	.Y(G14_c),
+	.PAD(G14)
+);
+// @6:23
+  INBUF G140_ibuf (
+	.Y(G140_c),
+	.PAD(G140)
+);
+// @6:23
+  INBUF G141_ibuf (
+	.Y(G141_c),
+	.PAD(G141)
+);
+// @6:23
+  INBUF G142_ibuf (
+	.Y(G142_c),
+	.PAD(G142)
+);
+// @6:24
+  INBUF G143_ibuf (
+	.Y(G143_c),
+	.PAD(G143)
+);
+// @6:24
+  INBUF G144_ibuf (
+	.Y(G144_c),
+	.PAD(G144)
+);
+// @6:24
+  INBUF G145_ibuf (
+	.Y(G145_c),
+	.PAD(G145)
+);
+// @6:24
+  INBUF G146_ibuf (
+	.Y(G146_c),
+	.PAD(G146)
+);
+// @6:24
+  INBUF G147_ibuf (
+	.Y(G147_c),
+	.PAD(G147)
+);
+// @6:24
+  INBUF G148_ibuf (
+	.Y(G148_c),
+	.PAD(G148)
+);
+// @6:24
+  INBUF G149_ibuf (
+	.Y(G149_c),
+	.PAD(G149)
+);
+// @6:16
+  INBUF G15_ibuf (
+	.Y(G15_c),
+	.PAD(G15)
+);
+// @6:24
+  INBUF G150_ibuf (
+	.Y(G150_c),
+	.PAD(G150)
+);
+// @6:24
+  INBUF G151_ibuf (
+	.Y(G151_c),
+	.PAD(G151)
+);
+// @6:24
+  INBUF G152_ibuf (
+	.Y(G152_c),
+	.PAD(G152)
+);
+// @6:24
+  INBUF G153_ibuf (
+	.Y(G153_c),
+	.PAD(G153)
+);
+// @6:24
+  INBUF G154_ibuf (
+	.Y(G154_c),
+	.PAD(G154)
+);
+// @6:24
+  INBUF G155_ibuf (
+	.Y(G155_c),
+	.PAD(G155)
+);
+// @6:24
+  INBUF G156_ibuf (
+	.Y(G156_c),
+	.PAD(G156)
+);
+// @6:24
+  INBUF G157_ibuf (
+	.Y(G157_c),
+	.PAD(G157)
+);
+// @6:16
+  INBUF G16_ibuf (
+	.Y(G16_c),
+	.PAD(G16)
+);
+// @6:16
+  INBUF G17_ibuf (
+	.Y(G17_c),
+	.PAD(G17)
+);
+// @6:16
+  INBUF G18_ibuf (
+	.Y(G18_c),
+	.PAD(G18)
+);
+// @6:16
+  INBUF G19_ibuf (
+	.Y(G19_c),
+	.PAD(G19)
+);
+// @6:16
+  INBUF G2_ibuf (
+	.Y(G2_c),
+	.PAD(G2)
+);
+// @6:16
+  INBUF G20_ibuf (
+	.Y(G20_c),
+	.PAD(G20)
+);
+// @6:17
+  INBUF G21_ibuf (
+	.Y(G21_c),
+	.PAD(G21)
+);
+// @6:17
+  INBUF G22_ibuf (
+	.Y(G22_c),
+	.PAD(G22)
+);
+// @6:17
+  INBUF G23_ibuf (
+	.Y(G23_c),
+	.PAD(G23)
+);
+// @6:17
+  INBUF G24_ibuf (
+	.Y(G24_c),
+	.PAD(G24)
+);
+// @6:17
+  INBUF G25_ibuf (
+	.Y(G25_c),
+	.PAD(G25)
+);
+// @6:17
+  INBUF G26_ibuf (
+	.Y(G26_c),
+	.PAD(G26)
+);
+// @6:17
+  INBUF G27_ibuf (
+	.Y(G27_c),
+	.PAD(G27)
+);
+// @6:17
+  INBUF G28_ibuf (
+	.Y(G28_c),
+	.PAD(G28)
+);
+// @6:17
+  INBUF G29_ibuf (
+	.Y(G29_c),
+	.PAD(G29)
+);
+// @6:16
+  INBUF G3_ibuf (
+	.Y(G3_c),
+	.PAD(G3)
+);
+// @6:17
+  INBUF G30_ibuf (
+	.Y(G30_c),
+	.PAD(G30)
+);
+// @6:17
+  INBUF G31_ibuf (
+	.Y(G31_c),
+	.PAD(G31)
+);
+// @6:17
+  INBUF G32_ibuf (
+	.Y(G32_c),
+	.PAD(G32)
+);
+// @6:17
+  INBUF G33_ibuf (
+	.Y(G33_c),
+	.PAD(G33)
+);
+// @6:17
+  INBUF G34_ibuf (
+	.Y(G34_c),
+	.PAD(G34)
+);
+// @6:17
+  INBUF G35_ibuf (
+	.Y(G35_c),
+	.PAD(G35)
+);
+// @6:17
+  INBUF G36_ibuf (
+	.Y(G36_c),
+	.PAD(G36)
+);
+// @6:17
+  INBUF G37_ibuf (
+	.Y(G37_c),
+	.PAD(G37)
+);
+// @6:17
+  INBUF G38_ibuf (
+	.Y(G38_c),
+	.PAD(G38)
+);
+// @6:17
+  INBUF G39_ibuf (
+	.Y(G39_c),
+	.PAD(G39)
+);
+// @6:16
+  INBUF G4_ibuf (
+	.Y(G4_c),
+	.PAD(G4)
+);
+// @6:18
+  INBUF G40_ibuf (
+	.Y(G40_c),
+	.PAD(G40)
+);
+// @6:18
+  INBUF G41_ibuf (
+	.Y(G41_c),
+	.PAD(G41)
+);
+// @6:18
+  INBUF G42_ibuf (
+	.Y(G42_c),
+	.PAD(G42)
+);
+// @6:18
+  INBUF G43_ibuf (
+	.Y(G43_c),
+	.PAD(G43)
+);
+// @6:18
+  INBUF G44_ibuf (
+	.Y(G44_c),
+	.PAD(G44)
+);
+// @6:18
+  INBUF G45_ibuf (
+	.Y(G45_c),
+	.PAD(G45)
+);
+// @6:18
+  INBUF G46_ibuf (
+	.Y(G46_c),
+	.PAD(G46)
+);
+// @6:18
+  INBUF G47_ibuf (
+	.Y(G47_c),
+	.PAD(G47)
+);
+// @6:18
+  INBUF G48_ibuf (
+	.Y(G48_c),
+	.PAD(G48)
+);
+// @6:18
+  INBUF G49_ibuf (
+	.Y(G49_c),
+	.PAD(G49)
+);
+// @6:16
+  INBUF G5_ibuf (
+	.Y(G5_c),
+	.PAD(G5)
+);
+// @6:18
+  INBUF G50_ibuf (
+	.Y(G50_c),
+	.PAD(G50)
+);
+// @6:18
+  INBUF G51_ibuf (
+	.Y(G51_c),
+	.PAD(G51)
+);
+// @6:18
+  INBUF G52_ibuf (
+	.Y(G52_c),
+	.PAD(G52)
+);
+// @6:18
+  INBUF G53_ibuf (
+	.Y(G53_c),
+	.PAD(G53)
+);
+// @6:18
+  INBUF G54_ibuf (
+	.Y(G54_c),
+	.PAD(G54)
+);
+// @6:18
+  INBUF G55_ibuf (
+	.Y(G55_c),
+	.PAD(G55)
+);
+// @6:18
+  INBUF G56_ibuf (
+	.Y(G56_c),
+	.PAD(G56)
+);
+// @6:18
+  INBUF G57_ibuf (
+	.Y(G57_c),
+	.PAD(G57)
+);
+// @6:18
+  INBUF G58_ibuf (
+	.Y(G58_c),
+	.PAD(G58)
+);
+// @6:19
+  INBUF G59_ibuf (
+	.Y(G59_c),
+	.PAD(G59)
+);
+// @6:16
+  INBUF G6_ibuf (
+	.Y(G6_c),
+	.PAD(G6)
+);
+// @6:19
+  INBUF G60_ibuf (
+	.Y(G60_c),
+	.PAD(G60)
+);
+// @6:19
+  INBUF G61_ibuf (
+	.Y(G61_c),
+	.PAD(G61)
+);
+// @6:19
+  INBUF G62_ibuf (
+	.Y(G62_c),
+	.PAD(G62)
+);
+// @6:19
+  INBUF G63_ibuf (
+	.Y(G63_c),
+	.PAD(G63)
+);
+// @6:19
+  INBUF G64_ibuf (
+	.Y(G64_c),
+	.PAD(G64)
+);
+// @6:19
+  INBUF G65_ibuf (
+	.Y(G65_c),
+	.PAD(G65)
+);
+// @6:19
+  INBUF G66_ibuf (
+	.Y(G66_c),
+	.PAD(G66)
+);
+// @6:19
+  INBUF G67_ibuf (
+	.Y(G67_c),
+	.PAD(G67)
+);
+// @6:19
+  INBUF G68_ibuf (
+	.Y(G68_c),
+	.PAD(G68)
+);
+// @6:19
+  INBUF G69_ibuf (
+	.Y(G69_c),
+	.PAD(G69)
+);
+// @6:16
+  INBUF G7_ibuf (
+	.Y(G7_c),
+	.PAD(G7)
+);
+// @6:19
+  INBUF G70_ibuf (
+	.Y(G70_c),
+	.PAD(G70)
+);
+// @6:19
+  INBUF G71_ibuf (
+	.Y(G71_c),
+	.PAD(G71)
+);
+// @6:19
+  INBUF G72_ibuf (
+	.Y(G72_c),
+	.PAD(G72)
+);
+// @6:19
+  INBUF G73_ibuf (
+	.Y(G73_c),
+	.PAD(G73)
+);
+// @6:19
+  INBUF G74_ibuf (
+	.Y(G74_c),
+	.PAD(G74)
+);
+// @6:19
+  INBUF G75_ibuf (
+	.Y(G75_c),
+	.PAD(G75)
+);
+// @6:19
+  INBUF G76_ibuf (
+	.Y(G76_c),
+	.PAD(G76)
+);
+// @6:19
+  INBUF G77_ibuf (
+	.Y(G77_c),
+	.PAD(G77)
+);
+// @6:20
+  INBUF G78_ibuf (
+	.Y(G78_c),
+	.PAD(G78)
+);
+// @6:20
+  INBUF G79_ibuf (
+	.Y(G79_c),
+	.PAD(G79)
+);
+// @6:16
+  INBUF G8_ibuf (
+	.Y(G8_c),
+	.PAD(G8)
+);
+// @6:20
+  INBUF G80_ibuf (
+	.Y(G80_c),
+	.PAD(G80)
+);
+// @6:20
+  INBUF G81_ibuf (
+	.Y(G81_c),
+	.PAD(G81)
+);
+// @6:20
+  INBUF G82_ibuf (
+	.Y(G82_c),
+	.PAD(G82)
+);
+// @6:20
+  INBUF G83_ibuf (
+	.Y(G83_c),
+	.PAD(G83)
+);
+// @6:20
+  INBUF G84_ibuf (
+	.Y(G84_c),
+	.PAD(G84)
+);
+// @6:20
+  INBUF G85_ibuf (
+	.Y(G85_c),
+	.PAD(G85)
+);
+// @6:20
+  INBUF G86_ibuf (
+	.Y(G86_c),
+	.PAD(G86)
+);
+// @6:20
+  INBUF G87_ibuf (
+	.Y(G87_c),
+	.PAD(G87)
+);
+// @6:20
+  INBUF G88_ibuf (
+	.Y(G88_c),
+	.PAD(G88)
+);
+// @6:20
+  INBUF G89_ibuf (
+	.Y(G89_c),
+	.PAD(G89)
+);
+// @6:16
+  INBUF G9_ibuf (
+	.Y(G9_c),
+	.PAD(G9)
+);
+// @6:20
+  INBUF G90_ibuf (
+	.Y(G90_c),
+	.PAD(G90)
+);
+// @6:20
+  INBUF G91_ibuf (
+	.Y(G91_c),
+	.PAD(G91)
+);
+// @6:20
+  INBUF G92_ibuf (
+	.Y(G92_c),
+	.PAD(G92)
+);
+// @6:20
+  INBUF G93_ibuf (
+	.Y(G93_c),
+	.PAD(G93)
+);
+// @6:20
+  INBUF G94_ibuf (
+	.Y(G94_c),
+	.PAD(G94)
+);
+// @6:20
+  INBUF G95_ibuf (
+	.Y(G95_c),
+	.PAD(G95)
+);
+// @6:20
+  INBUF G96_ibuf (
+	.Y(G96_c),
+	.PAD(G96)
+);
+// @6:21
+  INBUF G97_ibuf (
+	.Y(G97_c),
+	.PAD(G97)
+);
+// @6:21
+  INBUF G98_ibuf (
+	.Y(G98_c),
+	.PAD(G98)
+);
+// @6:21
+  INBUF G99_ibuf (
+	.Y(G99_c),
+	.PAD(G99)
+);
+// @6:25
+  OUTBUF G2531_obuf (
+	.PAD(G2531),
+	.D(G115_c_i)
+);
+// @6:25
+  OUTBUF G2532_obuf (
+	.PAD(G2532),
+	.D(G115_c_i)
+);
+// @6:25
+  OUTBUF G2533_obuf (
+	.PAD(G2533),
+	.D(G115_c_i)
+);
+// @6:25
+  OUTBUF G2534_obuf (
+	.PAD(G2534),
+	.D(G124_c_i)
+);
+// @6:25
+  OUTBUF G2535_obuf (
+	.PAD(G2535),
+	.D(G124_c_i)
+);
+// @6:25
+  OUTBUF G2536_obuf (
+	.PAD(G2536),
+	.D(G137_c_i)
+);
+// @6:25
+  OUTBUF G2537_obuf (
+	.PAD(G2537),
+	.D(G137_c_i)
+);
+// @6:25
+  OUTBUF G2538_obuf (
+	.PAD(G2538),
+	.D(G137_c_i)
+);
+// @6:25
+  OUTBUF G2539_obuf (
+	.PAD(G2539),
+	.D(G32_c_i)
+);
+// @6:25
+  OUTBUF G2540_obuf (
+	.PAD(G2540),
+	.D(G106_c_i)
+);
+// @6:25
+  OUTBUF G2541_obuf (
+	.PAD(G2541),
+	.D(G64_c_i)
+);
+// @6:25
+  OUTBUF G2542_obuf (
+	.PAD(G2542),
+	.D(G76_c_i)
+);
+// @6:26
+  OUTBUF G2543_obuf (
+	.PAD(G2543),
+	.D(G53_c_i)
+);
+// @6:26
+  OUTBUF G2544_obuf (
+	.PAD(G2544),
+	.D(G96_c_i)
+);
+// @6:26
+  OUTBUF G2545_obuf (
+	.PAD(G2545),
+	.D(G43_c_i)
+);
+// @6:26
+  OUTBUF G2546_obuf (
+	.PAD(G2546),
+	.D(G86_c_i)
+);
+// @6:26
+  OUTBUF G2547_obuf (
+	.PAD(G2547),
+	.D(G285_i)
+);
+// @6:26
+  OUTBUF G2548_obuf (
+	.PAD(G2548),
+	.D(G287_i)
+);
+// @6:26
+  OUTBUF G2549_obuf (
+	.PAD(G2549),
+	.D(G115_c)
+);
+// @6:26
+  OUTBUF G2550_obuf (
+	.PAD(G2550),
+	.D(G2550_c)
+);
+// @6:26
+  OUTBUF G2551_obuf (
+	.PAD(G2551),
+	.D(G443_i)
+);
+// @6:26
+  OUTBUF G2552_obuf (
+	.PAD(G2552),
+	.D(un1_G119_i)
+);
+// @6:26
+  OUTBUF G2553_obuf (
+	.PAD(G2553),
+	.D(G592_i)
+);
+// @6:26
+  OUTBUF G2554_obuf (
+	.PAD(G2554),
+	.D(G595_i)
+);
+// @6:27
+  OUTBUF G2555_obuf (
+	.PAD(G2555),
+	.D(G595_i)
+);
+// @6:27
+  OUTBUF G2556_obuf (
+	.PAD(G2556),
+	.D(G993_Z)
+);
+// @6:27
+  OUTBUF G2557_obuf (
+	.PAD(G2557),
+	.D(G1044_Z)
+);
+// @6:27
+  OUTBUF G2558_obuf (
+	.PAD(G2558),
+	.D(G1049_Z)
+);
+// @6:27
+  OUTBUF G2559_obuf (
+	.PAD(G2559),
+	.D(G1039_Z)
+);
+// @6:27
+  OUTBUF G2560_obuf (
+	.PAD(G2560),
+	.D(G2569_c_i)
+);
+// @6:27
+  OUTBUF G2561_obuf (
+	.PAD(G2561),
+	.D(G2568_c_i)
+);
+// @6:27
+  OUTBUF G2562_obuf (
+	.PAD(G2562),
+	.D(G2567_c_i)
+);
+// @6:27
+  OUTBUF G2563_obuf (
+	.PAD(G2563),
+	.D(G2563_c)
+);
+// @6:27
+  OUTBUF G2564_obuf (
+	.PAD(G2564),
+	.D(G1118_i)
+);
+// @6:27
+  OUTBUF G2565_obuf (
+	.PAD(G2565),
+	.D(G1119_i)
+);
+// @6:27
+  OUTBUF G2566_obuf (
+	.PAD(G2566),
+	.D(G2566_c)
+);
+// @6:28
+  OUTBUF G2567_obuf (
+	.PAD(G2567),
+	.D(G2567_c)
+);
+// @6:28
+  OUTBUF G2568_obuf (
+	.PAD(G2568),
+	.D(G2568_c)
+);
+// @6:28
+  OUTBUF G2569_obuf (
+	.PAD(G2569),
+	.D(G2569_c)
+);
+// @6:28
+  OUTBUF G2570_obuf (
+	.PAD(G2570),
+	.D(G2570_c)
+);
+// @6:28
+  OUTBUF G2571_obuf (
+	.PAD(G2571),
+	.D(G2571_c)
+);
+// @6:28
+  OUTBUF G2572_obuf (
+	.PAD(G2572),
+	.D(G2572_c)
+);
+// @6:28
+  OUTBUF G2573_obuf (
+	.PAD(G2573),
+	.D(un1_G1008_3_Z[0])
+);
+// @6:28
+  OUTBUF G2574_obuf (
+	.PAD(G2574),
+	.D(un1_G1008_3_Z[0])
+);
+// @6:28
+  OUTBUF G2575_obuf (
+	.PAD(G2575),
+	.D(un1_G1144_Z[0])
+);
+// @6:28
+  OUTBUF G2576_obuf (
+	.PAD(G2576),
+	.D(un1_G1144_Z[0])
+);
+// @6:28
+  OUTBUF G2577_obuf (
+	.PAD(G2577),
+	.D(un1_G1321_Z[0])
+);
+// @6:28
+  OUTBUF G2578_obuf (
+	.PAD(G2578),
+	.D(un1_G1002_2_Z[0])
+);
+// @6:29
+  OUTBUF G2579_obuf (
+	.PAD(G2579),
+	.D(un1_G1002_2_Z[0])
+);
+// @6:29
+  OUTBUF G2580_obuf (
+	.PAD(G2580),
+	.D(un1_G575_1_i)
+);
+// @6:29
+  OUTBUF G2581_obuf (
+	.PAD(G2581),
+	.D(G1802_Z)
+);
+// @6:29
+  OUTBUF G2582_obuf (
+	.PAD(G2582),
+	.D(G2582_c)
+);
+// @6:29
+  OUTBUF G2583_obuf (
+	.PAD(G2583),
+	.D(G2583_c)
+);
+// @6:29
+  OUTBUF G2584_obuf (
+	.PAD(G2584),
+	.D(G1884_i)
+);
+// @6:29
+  OUTBUF G2585_obuf (
+	.PAD(G2585),
+	.D(G1884_i)
+);
+// @6:29
+  OUTBUF G2586_obuf (
+	.PAD(G2586),
+	.D(un1_G2206_Z[0])
+);
+// @6:29
+  OUTBUF G2587_obuf (
+	.PAD(G2587),
+	.D(G2337_Z)
+);
+// @6:29
+  OUTBUF G2588_obuf (
+	.PAD(G2588),
+	.D(un1_G998_2_Z[0])
+);
+// @6:29
+  OUTBUF G2589_obuf (
+	.PAD(G2589),
+	.D(un1_G998_2_Z[0])
+);
+// @6:29
+  OUTBUF G2590_obuf (
+	.PAD(G2590),
+	.D(G2470_Z)
+);
+// @6:30
+  OUTBUF G2591_obuf (
+	.PAD(G2591),
+	.D(G2505_i)
+);
+// @6:30
+  OUTBUF G2592_obuf (
+	.PAD(G2592),
+	.D(GND)
+);
+// @6:30
+  OUTBUF G2593_obuf (
+	.PAD(G2593),
+	.D(G2528_i)
+);
+// @6:30
+  OUTBUF G2594_obuf (
+	.PAD(G2594),
+	.D(G2528_i)
+);
+// @6:428
+  ARI1 G2571_1_0_0_wmux_0 (
+	.FCO(G2571_1_0_0_co1),
+	.S(G2571_1_0_0_wmux_0_S),
+	.Y(G2571_c),
+	.B(G120_c),
+	.C(G34_c),
+	.D(G66_c),
+	.A(G2571_1_0_0_y0),
+	.FCI(G2571_1_0_0_co0)
+);
+defparam G2571_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:428
+  ARI1 G2571_1_0_0_wmux (
+	.FCO(G2571_1_0_0_co0),
+	.S(G2571_1_0_0_wmux_S),
+	.Y(G2571_1_0_0_y0),
+	.B(G120_c),
+	.C(G55_c),
+	.D(G45_c),
+	.A(G117_c),
+	.FCI(VCC)
+);
+defparam G2571_1_0_0_wmux.INIT=20'h0FA44;
+// @6:433
+  ARI1 G1053_1_0_0_wmux_0 (
+	.FCO(G1053_1_0_0_co1),
+	.S(G1053_1_0_0_wmux_0_S),
+	.Y(G1053),
+	.B(G146_c),
+	.C(G77_c),
+	.D(G107_c),
+	.A(G1053_1_0_0_y0),
+	.FCI(G1053_1_0_0_co0)
+);
+defparam G1053_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:433
+  ARI1 G1053_1_0_0_wmux (
+	.FCO(G1053_1_0_0_co0),
+	.S(G1053_1_0_0_wmux_S),
+	.Y(G1053_1_0_0_y0),
+	.B(G146_c),
+	.C(G87_c),
+	.D(G97_c),
+	.A(G145_c),
+	.FCI(VCC)
+);
+defparam G1053_1_0_0_wmux.INIT=20'h0FA44;
+// @6:436
+  ARI1 G1067_1_0_0_wmux_0 (
+	.FCO(G1067_1_0_0_co1),
+	.S(G1067_1_0_0_wmux_0_S),
+	.Y(G1067),
+	.B(G146_c),
+	.C(G83_c),
+	.D(G113_c),
+	.A(G1067_1_0_0_y0),
+	.FCI(G1067_1_0_0_co0)
+);
+defparam G1067_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:436
+  ARI1 G1067_1_0_0_wmux (
+	.FCO(G1067_1_0_0_co0),
+	.S(G1067_1_0_0_wmux_S),
+	.Y(G1067_1_0_0_y0),
+	.B(G146_c),
+	.C(G93_c),
+	.D(G103_c),
+	.A(G145_c),
+	.FCI(VCC)
+);
+defparam G1067_1_0_0_wmux.INIT=20'h0FA44;
+// @6:429
+  ARI1 G2572_1_0_0_wmux_0 (
+	.FCO(G2572_1_0_0_co1),
+	.S(G2572_1_0_0_wmux_0_S),
+	.Y(G2572_c),
+	.B(G120_c),
+	.C(G33_c),
+	.D(G65_c),
+	.A(G2572_1_0_0_y0),
+	.FCI(G2572_1_0_0_co0)
+);
+defparam G2572_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:429
+  ARI1 G2572_1_0_0_wmux (
+	.FCO(G2572_1_0_0_co0),
+	.S(G2572_1_0_0_wmux_S),
+	.Y(G2572_1_0_0_y0),
+	.B(G120_c),
+	.C(G54_c),
+	.D(G44_c),
+	.A(G117_c),
+	.FCI(VCC)
+);
+defparam G2572_1_0_0_wmux.INIT=20'h0FA44;
+// @6:435
+  ARI1 G1062_1_0_0_wmux_0 (
+	.FCO(G1062_1_0_0_co1),
+	.S(G1062_1_0_0_wmux_0_S),
+	.Y(G1062),
+	.B(G146_c),
+	.C(G75_c),
+	.D(G105_c),
+	.A(G1062_1_0_0_y0),
+	.FCI(G1062_1_0_0_co0)
+);
+defparam G1062_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:435
+  ARI1 G1062_1_0_0_wmux (
+	.FCO(G1062_1_0_0_co0),
+	.S(G1062_1_0_0_wmux_S),
+	.Y(G1062_1_0_0_y0),
+	.B(G146_c),
+	.C(G85_c),
+	.D(G95_c),
+	.A(G145_c),
+	.FCI(VCC)
+);
+defparam G1062_1_0_0_wmux.INIT=20'h0FA44;
+// @6:437
+  ARI1 G1072_1_0_0_wmux_0 (
+	.FCO(G1072_1_0_0_co1),
+	.S(G1072_1_0_0_wmux_0_S),
+	.Y(G1072),
+	.B(G146_c),
+	.C(G82_c),
+	.D(G112_c),
+	.A(G1072_1_0_0_y0),
+	.FCI(G1072_1_0_0_co0)
+);
+defparam G1072_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:437
+  ARI1 G1072_1_0_0_wmux (
+	.FCO(G1072_1_0_0_co0),
+	.S(G1072_1_0_0_wmux_S),
+	.Y(G1072_1_0_0_y0),
+	.B(G146_c),
+	.C(G92_c),
+	.D(G102_c),
+	.A(G145_c),
+	.FCI(VCC)
+);
+defparam G1072_1_0_0_wmux.INIT=20'h0FA44;
+// @6:422
+  ARI1 G1008_1_0_0_wmux_0 (
+	.FCO(G1008_1_0_0_co1),
+	.S(G1008_1_0_0_wmux_0_S),
+	.Y(G1008),
+	.B(G120_c),
+	.C(G40_c),
+	.D(G72_c),
+	.A(G1008_1_0_0_y0),
+	.FCI(G1008_1_0_0_co0)
+);
+defparam G1008_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:422
+  ARI1 G1008_1_0_0_wmux (
+	.FCO(G1008_1_0_0_co0),
+	.S(G1008_1_0_0_wmux_S),
+	.Y(G1008_1_0_0_y0),
+	.B(G120_c),
+	.C(G61_c),
+	.D(G50_c),
+	.A(G117_c),
+	.FCI(VCC)
+);
+defparam G1008_1_0_0_wmux.INIT=20'h0FA44;
+// @6:423
+  ARI1 G2566_1_0_0_wmux_0 (
+	.FCO(G2566_1_0_0_co1),
+	.S(G2566_1_0_0_wmux_0_S),
+	.Y(G2566_c),
+	.B(G120_c),
+	.C(G39_c),
+	.D(G71_c),
+	.A(G2566_1_0_0_y0),
+	.FCI(G2566_1_0_0_co0)
+);
+defparam G2566_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:423
+  ARI1 G2566_1_0_0_wmux (
+	.FCO(G2566_1_0_0_co0),
+	.S(G2566_1_0_0_wmux_S),
+	.Y(G2566_1_0_0_y0),
+	.B(G120_c),
+	.C(G60_c),
+	.D(G49_c),
+	.A(G117_c),
+	.FCI(VCC)
+);
+defparam G2566_1_0_0_wmux.INIT=20'h0FA44;
+// @6:420
+  ARI1 G998_1_0_0_wmux_0 (
+	.FCO(G998_1_0_0_co1),
+	.S(G998_1_0_0_wmux_0_S),
+	.Y(G998),
+	.B(G120_c),
+	.C(G41_c),
+	.D(G73_c),
+	.A(G998_1_0_0_y0),
+	.FCI(G998_1_0_0_co0)
+);
+defparam G998_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:420
+  ARI1 G998_1_0_0_wmux (
+	.FCO(G998_1_0_0_co0),
+	.S(G998_1_0_0_wmux_S),
+	.Y(G998_1_0_0_y0),
+	.B(G120_c),
+	.C(G62_c),
+	.D(G51_c),
+	.A(G117_c),
+	.FCI(VCC)
+);
+defparam G998_1_0_0_wmux.INIT=20'h0FA44;
+// @6:438
+  ARI1 G1076_1_0_0_wmux_0 (
+	.FCO(G1076_1_0_0_co1),
+	.S(G1076_1_0_0_wmux_0_S),
+	.Y(G1076),
+	.B(G146_c),
+	.C(G81_c),
+	.D(G111_c),
+	.A(G1076_1_0_0_y0),
+	.FCI(G1076_1_0_0_co0)
+);
+defparam G1076_1_0_0_wmux_0.INIT=20'h0F588;
+// @6:438
+  ARI1 G1076_1_0_0_wmux (
+	.FCO(G1076_1_0_0_co0),
+	.S(G1076_1_0_0_wmux_S),
+	.Y(G1076_1_0_0_y0),
+	.B(G146_c),
+	.C(G91_c),
+	.D(G101_c),
+	.A(G145_c),
+	.FCI(VCC)
+);
+defparam G1076_1_0_0_wmux.INIT=20'h0FA44;
+// @6:1138
+  CFG3 un1_G1871 (
+	.A(G138_c),
+	.B(G1072),
+	.C(G1409_Z),
+	.Y(un1_G1871_Z)
+);
+defparam un1_G1871.INIT=8'h20;
+// @6:1185
+  CFG4 G2425_0 (
+	.A(G135_c),
+	.B(G1062),
+	.C(G1409_Z),
+	.D(G2572_c),
+	.Y(G2425_0_Z)
+);
+defparam G2425_0.INIT=16'h7F0F;
+// @6:1315
+  CFG3 \un1_G1321[0]  (
+	.A(G118_c),
+	.B(G122_c),
+	.C(G1008),
+	.Y(un1_G1321_Z[0])
+);
+defparam \un1_G1321[0] .INIT=8'hF2;
+// @6:933
+  CFG4 un1_G1858 (
+	.A(G118_c),
+	.B(G1002_0_Z),
+	.C(G1002_1_Z),
+	.D(G1008),
+	.Y(un1_G1858_Z)
+);
+defparam un1_G1858.INIT=16'h03A9;
+// @6:1101
+  CFG4 un1_G2209 (
+	.A(G118_c),
+	.B(un1_G1599_Z),
+	.C(G2566_c),
+	.D(G1008),
+	.Y(un1_G2209_Z)
+);
+defparam un1_G2209.INIT=16'hC369;
+  CFG4 G2564_obuf_RNO (
+	.A(G116_c),
+	.B(G121_c),
+	.C(G993_Z),
+	.D(G28_c),
+	.Y(G1118_i)
+);
+defparam G2564_obuf_RNO.INIT=16'hFDFF;
+// @6:881
+  CFG3 G1903 (
+	.A(G2569_0_Z),
+	.B(G2569_1_Z),
+	.C(G8_c),
+	.Y(G1903_Z)
+);
+defparam G1903.INIT=8'h10;
+// @6:1315
+  CFG4 \un1_G1026[0]  (
+	.A(G2569_0_Z),
+	.B(G2569_1_Z),
+	.C(G12_c),
+	.D(G16_c),
+	.Y(un1_G1026_Z[0])
+);
+defparam \un1_G1026[0] .INIT=16'hFE0E;
+// @6:1218
+  CFG4 G2478_1 (
+	.A(G2568_0_Z),
+	.B(G2568_1_Z),
+	.C(G8_c),
+	.D(un1_G536_1_Z[0]),
+	.Y(G2478_1_Z)
+);
+defparam G2478_1.INIT=16'hE000;
+// @6:1315
+  CFG4 \un1_G1144[0]  (
+	.A(G2568_0_Z),
+	.B(G2568_1_Z),
+	.C(G123_c),
+	.D(G2566_c),
+	.Y(un1_G1144_Z[0])
+);
+defparam \un1_G1144[0] .INIT=16'h1F10;
+// @6:1202
+  CFG4 un1_G2403 (
+	.A(G2568_0_Z),
+	.B(G2568_1_Z),
+	.C(G8_c),
+	.D(un1_G536_1_Z[0]),
+	.Y(un1_G2403_Z)
+);
+defparam un1_G2403.INIT=16'hE010;
+// @6:1226
+  CFG4 G2486_0 (
+	.A(G2567_0_Z),
+	.B(G2567_1_Z),
+	.C(G2478_0_Z),
+	.D(un1_G539_1_Z[0]),
+	.Y(G2486_0_Z)
+);
+defparam G2486_0.INIT=16'h10E0;
+// @6:1315
+  CFG4 \un1_G1008_3[0]  (
+	.A(G2567_0_Z),
+	.B(G2567_1_Z),
+	.C(G123_c),
+	.D(G1008),
+	.Y(un1_G1008_3_Z[0])
+);
+defparam \un1_G1008_3[0] .INIT=16'hE0EF;
+// @6:1315
+  CFG4 \un1_G1017[0]  (
+	.A(G2567_0_Z),
+	.B(G2567_1_Z),
+	.C(G5_c),
+	.D(G12_c),
+	.Y(un1_G1017_Z[0])
+);
+defparam \un1_G1017[0] .INIT=16'hF0EE;
+// @6:954
+  CFG4 un1_G1964 (
+	.A(un1_G1964_1_Z),
+	.B(G1076),
+	.C(G1072),
+	.D(G1067),
+	.Y(un1_G1964_Z)
+);
+defparam un1_G1964.INIT=16'h9669;
+// @6:954
+  CFG4 un1_G1964_1 (
+	.A(G1079_1_Z),
+	.B(G1079_0_Z),
+	.C(G1062),
+	.D(G1039_Z),
+	.Y(un1_G1964_1_Z)
+);
+defparam un1_G1964_1.INIT=16'h1EE1;
+// @6:1187
+  CFG4 G2427_2 (
+	.A(G2571_c),
+	.B(G2427_2_1_0_Z),
+	.C(G1314_Z),
+	.D(G8_c),
+	.Y(G2427_2_Z)
+);
+defparam G2427_2.INIT=16'h23FF;
+// @6:1187
+  CFG4 G2427_2_1_0 (
+	.A(G2570_c),
+	.B(G1314_Z),
+	.C(G133_c),
+	.D(G132_c),
+	.Y(G2427_2_1_0_Z)
+);
+defparam G2427_2_1_0.INIT=16'h4777;
+// @6:836
+  CFG4 G2583_cZ (
+	.A(un1_G1220_Z),
+	.B(G2583_1_0_Z),
+	.C(G132_c),
+	.D(G130_c),
+	.Y(G2583_c)
+);
+defparam G2583_cZ.INIT=16'h6996;
+// @6:836
+  CFG4 G2583_1_0 (
+	.A(G156_c),
+	.B(G131_c),
+	.C(G129_c),
+	.D(G128_c),
+	.Y(G2583_1_0_Z)
+);
+defparam G2583_1_0.INIT=16'h6996;
+// @6:582
+  CFG4 un1_G1251 (
+	.A(un1_G1251_1_Z),
+	.B(G153_c),
+	.C(G152_c),
+	.D(G151_c),
+	.Y(N_30)
+);
+defparam un1_G1251.INIT=16'h9669;
+// @6:582
+  CFG3 un1_G1251_1 (
+	.A(G150_c),
+	.B(G149_c),
+	.C(G148_c),
+	.Y(un1_G1251_1_Z)
+);
+defparam un1_G1251_1.INIT=8'h69;
+// @6:699
+  CFG4 un1_G1453 (
+	.A(un1_G1453_1_Z),
+	.B(G142_c),
+	.C(G141_c),
+	.D(G140_c),
+	.Y(un1_G1453_Z)
+);
+defparam un1_G1453.INIT=16'h6996;
+// @6:699
+  CFG3 un1_G1453_1 (
+	.A(G157_c),
+	.B(G139_c),
+	.C(G138_c),
+	.Y(un1_G1453_1_Z)
+);
+defparam un1_G1453_1.INIT=8'h69;
+// @6:432
+  CFG4 G1049 (
+	.A(G1049_1_0_Z),
+	.B(G146_c),
+	.C(G108_c),
+	.D(G78_c),
+	.Y(G1049_Z)
+);
+defparam G1049.INIT=16'h26AE;
+// @6:432
+  CFG4 G1049_1_0 (
+	.A(G146_c),
+	.B(G145_c),
+	.C(G98_c),
+	.D(G88_c),
+	.Y(G1049_1_0_Z)
+);
+defparam G1049_1_0.INIT=16'h2637;
+// @6:430
+  CFG4 G1039 (
+	.A(G1039_1_0_Z),
+	.B(G146_c),
+	.C(G110_c),
+	.D(G80_c),
+	.Y(G1039_Z)
+);
+defparam G1039.INIT=16'h26AE;
+// @6:430
+  CFG4 G1039_1_0 (
+	.A(G146_c),
+	.B(G145_c),
+	.C(G100_c),
+	.D(G90_c),
+	.Y(G1039_1_0_Z)
+);
+defparam G1039_1_0.INIT=16'h2637;
+// @6:431
+  CFG4 G1044 (
+	.A(G1044_1_0_Z),
+	.B(G146_c),
+	.C(G109_c),
+	.D(G79_c),
+	.Y(G1044_Z)
+);
+defparam G1044.INIT=16'h26AE;
+// @6:431
+  CFG4 G1044_1_0 (
+	.A(G146_c),
+	.B(G145_c),
+	.C(G99_c),
+	.D(G89_c),
+	.Y(G1044_1_0_Z)
+);
+defparam G1044_1_0.INIT=16'h2637;
+// @6:425
+  CFG2 G2568_i (
+	.A(G2568_0_Z),
+	.B(G2568_1_Z),
+	.Y(G2568_c_i)
+);
+defparam G2568_i.INIT=4'h1;
+// @6:424
+  CFG2 G2567_i (
+	.A(G2567_0_Z),
+	.B(G2567_1_Z),
+	.Y(G2567_c_i)
+);
+defparam G2567_i.INIT=4'h1;
+// @6:426
+  CFG2 G2569_i (
+	.A(G2569_0_Z),
+	.B(G2569_1_Z),
+	.Y(G2569_c_i)
+);
+defparam G2569_i.INIT=4'h1;
+// @6:1271
+  CFG2 G2550_cZ (
+	.A(G74_c),
+	.B(G115_c),
+	.Y(G2550_c)
+);
+defparam G2550_cZ.INIT=4'h2;
+  CFG2 G2551_obuf_RNO (
+	.A(G7_c),
+	.B(G121_c),
+	.Y(G443_i)
+);
+defparam G2551_obuf_RNO.INIT=4'h7;
+// @6:427
+  CFG4 G2570_0 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G67_c),
+	.D(G56_c),
+	.Y(G2570_0_Z)
+);
+defparam G2570_0.INIT=16'hD5C0;
+// @6:140
+  CFG4 G339 (
+	.A(G96_c),
+	.B(G86_c),
+	.C(G53_c),
+	.D(G43_c),
+	.Y(G339_Z)
+);
+defparam G339.INIT=16'h8000;
+// @6:139
+  CFG4 G336 (
+	.A(G106_c),
+	.B(G76_c),
+	.C(G64_c),
+	.D(G32_c),
+	.Y(G336_Z)
+);
+defparam G336.INIT=16'h8000;
+  CFG4 G2547_obuf_RNO (
+	.A(G142_c),
+	.B(G141_c),
+	.C(G140_c),
+	.D(G139_c),
+	.Y(G285_i)
+);
+defparam G2547_obuf_RNO.INIT=16'h7FFF;
+  CFG3 G2548_obuf_RNO (
+	.A(G121_c),
+	.B(G11_c),
+	.C(G2_c),
+	.Y(G287_i)
+);
+defparam G2548_obuf_RNO.INIT=8'h7F;
+  CFG3 G2552_obuf_RNO (
+	.A(G121_c),
+	.B(G119_c),
+	.C(G7_c),
+	.Y(un1_G119_i)
+);
+defparam G2552_obuf_RNO.INIT=8'h7F;
+  CFG3 G2553_obuf_RNO (
+	.A(G147_c),
+	.B(G121_c),
+	.C(G7_c),
+	.Y(G592_i)
+);
+defparam G2553_obuf_RNO.INIT=8'h7F;
+// @6:424
+  CFG4 G2567_1 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G70_c),
+	.D(G59_c),
+	.Y(G2567_1_Z)
+);
+defparam G2567_1.INIT=16'h9180;
+// @6:424
+  CFG4 G2567_0 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G48_c),
+	.D(G38_c),
+	.Y(G2567_0_Z)
+);
+defparam G2567_0.INIT=16'h6240;
+// @6:439
+  CFG4 G1079_1 (
+	.A(G146_c),
+	.B(G145_c),
+	.C(G114_c),
+	.D(G94_c),
+	.Y(G1079_1_Z)
+);
+defparam G1079_1.INIT=16'h9180;
+// @6:439
+  CFG4 G1079_0 (
+	.A(G146_c),
+	.B(G145_c),
+	.C(G104_c),
+	.D(G84_c),
+	.Y(G1079_0_Z)
+);
+defparam G1079_0.INIT=16'h6240;
+// @6:421
+  CFG4 G1002_1 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G63_c),
+	.D(G52_c),
+	.Y(G1002_1_Z)
+);
+defparam G1002_1.INIT=16'h9180;
+// @6:421
+  CFG4 G1002_0 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G42_c),
+	.D(G31_c),
+	.Y(G1002_0_Z)
+);
+defparam G1002_0.INIT=16'h6240;
+// @6:425
+  CFG4 G2568_1 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G69_c),
+	.D(G58_c),
+	.Y(G2568_1_Z)
+);
+defparam G2568_1.INIT=16'h9180;
+// @6:425
+  CFG4 G2568_0 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G47_c),
+	.D(G37_c),
+	.Y(G2568_0_Z)
+);
+defparam G2568_0.INIT=16'h6240;
+// @6:426
+  CFG4 G2569_1 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G68_c),
+	.D(G57_c),
+	.Y(G2569_1_Z)
+);
+defparam G2569_1.INIT=16'h9180;
+// @6:426
+  CFG4 G2569_0 (
+	.A(G120_c),
+	.B(G117_c),
+	.C(G46_c),
+	.D(G36_c),
+	.Y(G2569_0_Z)
+);
+defparam G2569_0.INIT=16'h6240;
+  CFG2 G336_RNI9A7V (
+	.A(G336_Z),
+	.B(G339_Z),
+	.Y(G595_i)
+);
+defparam G336_RNI9A7V.INIT=4'h7;
+// @6:426
+  CFG2 G2569_cZ (
+	.A(G2569_0_Z),
+	.B(G2569_1_Z),
+	.Y(G2569_c)
+);
+defparam G2569_cZ.INIT=4'hE;
+// @6:425
+  CFG2 G2568_cZ (
+	.A(G2568_0_Z),
+	.B(G2568_1_Z),
+	.Y(G2568_c)
+);
+defparam G2568_cZ.INIT=4'hE;
+// @6:424
+  CFG2 G2567_cZ (
+	.A(G2567_0_Z),
+	.B(G2567_1_Z),
+	.Y(G2567_c)
+);
+defparam G2567_cZ.INIT=4'hE;
+// @6:427
+  CFG4 G2570_cZ (
+	.A(G2570_0_Z),
+	.B(G120_c),
+	.C(G117_c),
+	.D(G35_c),
+	.Y(G2570_c)
+);
+defparam G2570_cZ.INIT=16'hBEBA;
+// @6:419
+  CFG4 G993 (
+	.A(G339_Z),
+	.B(G336_Z),
+	.C(G147_c),
+	.D(G119_c),
+	.Y(G993_Z)
+);
+defparam G993.INIT=16'h7530;
+// @6:526
+  CFG4 un1_G1112 (
+	.A(G155_c),
+	.B(G154_c),
+	.C(G126_c),
+	.D(G125_c),
+	.Y(un1_G1112_Z)
+);
+defparam un1_G1112.INIT=16'h9669;
+// @6:527
+  CFG4 un1_G1220 (
+	.A(G136_c),
+	.B(G135_c),
+	.C(G134_c),
+	.D(G133_c),
+	.Y(un1_G1220_Z)
+);
+defparam un1_G1220.INIT=16'h9669;
+// @6:1284
+  CFG3 G2563_cZ (
+	.A(G1002_1_Z),
+	.B(G1002_0_Z),
+	.C(G122_c),
+	.Y(G2563_c)
+);
+defparam G2563_cZ.INIT=8'hEF;
+// @6:546
+  CFG2 un1_G283 (
+	.A(G118_c),
+	.B(G1008),
+	.Y(un1_G283_Z)
+);
+defparam un1_G283.INIT=4'h1;
+// @6:1315
+  CFG4 \un1_G1002[0]  (
+	.A(G1002_1_Z),
+	.B(G1002_0_Z),
+	.C(G13_c),
+	.D(G12_c),
+	.Y(un1_G1002_Z[0])
+);
+defparam \un1_G1002[0] .INIT=16'hF0EE;
+// @6:1315
+  CFG3 \un1_G1044[0]  (
+	.A(G1044_Z),
+	.B(G26_c),
+	.C(G23_c),
+	.Y(un1_G1044_Z[0])
+);
+defparam \un1_G1044[0] .INIT=8'hC5;
+// @6:1315
+  CFG3 \un1_G1053[0]  (
+	.A(G1053),
+	.B(G23_c),
+	.C(G22_c),
+	.Y(un1_G1053_Z[0])
+);
+defparam \un1_G1053[0] .INIT=8'hE2;
+// @6:460
+  CFG3 G1118_0 (
+	.A(G993_Z),
+	.B(G121_c),
+	.C(G116_c),
+	.Y(G1118_0_Z)
+);
+defparam G1118_0.INIT=8'h10;
+// @6:734
+  CFG3 un1_G1599 (
+	.A(G1002_1_Z),
+	.B(G1002_0_Z),
+	.C(G998),
+	.Y(un1_G1599_Z)
+);
+defparam un1_G1599.INIT=8'hE1;
+// @6:826
+  CFG2 un1_G1651 (
+	.A(G1008),
+	.B(G2566_c),
+	.Y(un1_G1651_Z)
+);
+defparam un1_G1651.INIT=4'h6;
+// @6:698
+  CFG2 un1_G1467 (
+	.A(G1044_Z),
+	.B(G1049_Z),
+	.Y(un1_G1467_Z)
+);
+defparam un1_G1467.INIT=4'h9;
+// @6:587
+  CFG4 G1409 (
+	.A(G1044_Z),
+	.B(G1039_Z),
+	.C(G127_c),
+	.D(G30_c),
+	.Y(G1409_Z)
+);
+defparam G1409.INIT=16'hA800;
+// @6:544
+  CFG4 G1314 (
+	.A(G1044_Z),
+	.B(G1039_Z),
+	.C(G127_c),
+	.D(G30_c),
+	.Y(G1314_Z)
+);
+defparam G1314.INIT=16'h0200;
+// @6:665
+  CFG4 un1_G132 (
+	.A(G2570_c),
+	.B(G132_c),
+	.C(G17_c),
+	.D(G12_c),
+	.Y(un1_G132_Z)
+);
+defparam un1_G132.INIT=16'h0C44;
+// @6:663
+  CFG4 un1_G130 (
+	.A(G2568_c),
+	.B(G130_c),
+	.C(G15_c),
+	.D(G12_c),
+	.Y(un1_G130_Z)
+);
+defparam un1_G130.INIT=16'h0C44;
+// @6:608
+  CFG4 un1_G927 (
+	.A(G2570_c),
+	.B(G132_c),
+	.C(G17_c),
+	.D(G12_c),
+	.Y(un1_G927_Z)
+);
+defparam un1_G927.INIT=16'h3022;
+// @6:604
+  CFG4 un1_G925 (
+	.A(G2568_c),
+	.B(G130_c),
+	.C(G15_c),
+	.D(G12_c),
+	.Y(un1_G925_Z)
+);
+defparam un1_G925.INIT=16'h3022;
+// @6:1315
+  CFG4 \un1_G1002_2[0]  (
+	.A(un1_G283_Z),
+	.B(G1002_1_Z),
+	.C(G1002_0_Z),
+	.D(G123_c),
+	.Y(un1_G1002_2_Z[0])
+);
+defparam \un1_G1002_2[0] .INIT=16'hAA03;
+// @6:943
+  CFG2 G2023 (
+	.A(G138_c),
+	.B(G1409_Z),
+	.Y(G2023_Z)
+);
+defparam G2023.INIT=4'h4;
+// @6:872
+  CFG4 G1884_11 (
+	.A(G1008),
+	.B(G126_c),
+	.C(G12_c),
+	.D(G4_c),
+	.Y(G1884_11_Z)
+);
+defparam G1884_11.INIT=16'hC939;
+// @6:872
+  CFG4 G1884_9 (
+	.A(G2566_c),
+	.B(G128_c),
+	.C(G14_c),
+	.D(G12_c),
+	.Y(G1884_9_Z)
+);
+defparam G1884_9.INIT=16'hC399;
+// @6:872
+  CFG4 G1884_8 (
+	.A(G2571_c),
+	.B(G133_c),
+	.C(G12_c),
+	.D(G6_c),
+	.Y(G1884_8_Z)
+);
+defparam G1884_8.INIT=16'hC939;
+// @6:872
+  CFG4 G1884_7 (
+	.A(G2572_c),
+	.B(G134_c),
+	.C(G18_c),
+	.D(G12_c),
+	.Y(G1884_7_Z)
+);
+defparam G1884_7.INIT=16'hC399;
+// @6:872
+  CFG4 G1884_6 (
+	.A(G1062),
+	.B(G135_c),
+	.C(G23_c),
+	.D(G19_c),
+	.Y(G1884_6_Z)
+);
+defparam G1884_6.INIT=16'hC939;
+// @6:872
+  CFG4 G1884_5 (
+	.A(G1067),
+	.B(G136_c),
+	.C(G24_c),
+	.D(G23_c),
+	.Y(G1884_5_Z)
+);
+defparam G1884_5.INIT=16'hC399;
+// @6:872
+  CFG4 G1884_4 (
+	.A(G1072),
+	.B(G138_c),
+	.C(G23_c),
+	.D(G20_c),
+	.Y(G1884_4_Z)
+);
+defparam G1884_4.INIT=16'hC939;
+// @6:872
+  CFG4 G1884_3 (
+	.A(G1076),
+	.B(G139_c),
+	.C(G25_c),
+	.D(G23_c),
+	.Y(G1884_3_Z)
+);
+defparam G1884_3.INIT=16'hC399;
+// @6:872
+  CFG4 G1884_2 (
+	.A(G1039_Z),
+	.B(G140_c),
+	.C(G23_c),
+	.D(G21_c),
+	.Y(G1884_2_Z)
+);
+defparam G1884_2.INIT=16'hC636;
+// @6:872
+  CFG4 G1884_1 (
+	.A(G1049_Z),
+	.B(G142_c),
+	.C(G27_c),
+	.D(G23_c),
+	.Y(G1884_1_Z)
+);
+defparam G1884_1.INIT=16'hC366;
+// @6:1315
+  CFG3 \un1_G536_1[0]  (
+	.A(G1314_Z),
+	.B(G141_c),
+	.C(G130_c),
+	.Y(un1_G536_1_Z[0])
+);
+defparam \un1_G536_1[0] .INIT=8'h27;
+// @6:1315
+  CFG3 \un1_G539_1[0]  (
+	.A(G1314_Z),
+	.B(G140_c),
+	.C(G129_c),
+	.Y(un1_G539_1_Z[0])
+);
+defparam \un1_G539_1[0] .INIT=8'h27;
+// @6:1315
+  CFG3 \un1_G527_1[0]  (
+	.A(G1314_Z),
+	.B(G138_c),
+	.C(G126_c),
+	.Y(un1_G527_1_Z[0])
+);
+defparam \un1_G527_1[0] .INIT=8'h27;
+// @6:1315
+  CFG3 \un1_G533[0]  (
+	.A(G1314_Z),
+	.B(G139_c),
+	.C(G128_c),
+	.Y(un1_G533_Z[0])
+);
+defparam \un1_G533[0] .INIT=8'h27;
+// @6:1315
+  CFG3 \un1_G530_1[0]  (
+	.A(G1314_Z),
+	.B(G136_c),
+	.C(G125_c),
+	.Y(un1_G530_1_Z[0])
+);
+defparam \un1_G530_1[0] .INIT=8'h27;
+  CFG3 G2565_obuf_RNO (
+	.A(G1118_0_Z),
+	.B(G3_c),
+	.C(G1_c),
+	.Y(G1119_i)
+);
+defparam G2565_obuf_RNO.INIT=8'hD5;
+  CFG3 G2580_obuf_RNO (
+	.A(G1053),
+	.B(G144_c),
+	.C(G143_c),
+	.Y(un1_G575_1_i)
+);
+defparam G2580_obuf_RNO.INIT=8'hED;
+// @6:977
+  CFG4 un1_G2044 (
+	.A(G2572_c),
+	.B(G2571_c),
+	.C(G2570_c),
+	.D(G2569_c),
+	.Y(un1_G2044_Z)
+);
+defparam un1_G2044.INIT=16'h9669;
+// @6:1140
+  CFG3 un1_G1869 (
+	.A(G1409_Z),
+	.B(G1062),
+	.C(G135_c),
+	.Y(un1_G1869_Z)
+);
+defparam un1_G1869.INIT=8'h80;
+// @6:844
+  CFG3 G2582_cZ (
+	.A(un1_G1453_Z),
+	.B(G144_c),
+	.C(G143_c),
+	.Y(G2582_c)
+);
+defparam G2582_cZ.INIT=8'h96;
+// @6:872
+  CFG4 G1884_24 (
+	.A(un1_G1026_Z[0]),
+	.B(un1_G925_Z),
+	.C(un1_G132_Z),
+	.D(G131_c),
+	.Y(G1884_24_Z)
+);
+defparam G1884_24.INIT=16'h0201;
+// @6:872
+  CFG4 G1884_23 (
+	.A(un1_G1002_Z[0]),
+	.B(un1_G927_Z),
+	.C(G125_c),
+	.D(G9_c),
+	.Y(G1884_23_Z)
+);
+defparam G1884_23.INIT=16'h2100;
+// @6:872
+  CFG4 G1884_17 (
+	.A(un1_G1053_Z[0]),
+	.B(un1_G1044_Z[0]),
+	.C(G1884_1_Z),
+	.D(G141_c),
+	.Y(G1884_17_Z)
+);
+defparam G1884_17.INIT=16'h80A0;
+// @6:1061
+  CFG4 G2231 (
+	.A(G1314_Z),
+	.B(G142_c),
+	.C(G131_c),
+	.D(G8_c),
+	.Y(G2231_Z)
+);
+defparam G2231.INIT=16'h2700;
+// @6:1236
+  CFG4 G2500_1 (
+	.A(un1_G1869_Z),
+	.B(G2572_c),
+	.C(G1409_Z),
+	.D(G134_c),
+	.Y(G2500_1_Z)
+);
+defparam G2500_1.INIT=16'h4555;
+// @6:1232
+  CFG4 G2492_1 (
+	.A(G1314_Z),
+	.B(G133_c),
+	.C(G132_c),
+	.D(G8_c),
+	.Y(G2492_1_Z)
+);
+defparam G2492_1.INIT=16'h1500;
+// @6:834
+  CFG3 G1802 (
+	.A(un1_G1112_Z),
+	.B(N_30),
+	.C(G10_c),
+	.Y(G1802_Z)
+);
+defparam G1802.INIT=8'h6F;
+// @6:1184
+  CFG4 G2424_2 (
+	.A(un1_G1871_Z),
+	.B(G1409_Z),
+	.C(G1067),
+	.D(G136_c),
+	.Y(G2424_2_Z)
+);
+defparam G2424_2.INIT=16'h1555;
+// @6:1210
+  CFG4 G2466_1 (
+	.A(un1_G533_Z[0]),
+	.B(G2566_c),
+	.C(G1002_1_Z),
+	.D(G1002_0_Z),
+	.Y(G2466_1_Z)
+);
+defparam G2466_1.INIT=16'h000E;
+// @6:872
+  CFG4 G1884_28 (
+	.A(un1_G1017_Z[0]),
+	.B(G1884_23_Z),
+	.C(G1884_11_Z),
+	.D(G129_c),
+	.Y(G1884_28_Z)
+);
+defparam G1884_28.INIT=16'h8040;
+// @6:872
+  CFG4 G1884_27 (
+	.A(G1884_9_Z),
+	.B(G1884_8_Z),
+	.C(G1884_7_Z),
+	.D(G1884_6_Z),
+	.Y(G1884_27_Z)
+);
+defparam G1884_27.INIT=16'h8000;
+// @6:872
+  CFG4 G1884_26 (
+	.A(G1884_5_Z),
+	.B(G1884_4_Z),
+	.C(G1884_3_Z),
+	.D(G1884_2_Z),
+	.Y(G1884_26_Z)
+);
+defparam G1884_26.INIT=16'h8000;
+// @6:872
+  CFG4 G1884_25 (
+	.A(un1_G1044_Z[0]),
+	.B(un1_G130_Z),
+	.C(G1884_17_Z),
+	.D(G141_c),
+	.Y(G1884_25_Z)
+);
+defparam G1884_25.INIT=16'h3010;
+// @6:1183
+  CFG4 G2423 (
+	.A(un1_G1871_Z),
+	.B(G1409_Z),
+	.C(G1067),
+	.D(G136_c),
+	.Y(G2423_Z)
+);
+defparam G2423.INIT=16'h0004;
+// @6:1100
+  CFG4 un1_G2207 (
+	.A(un1_G1651_Z),
+	.B(un1_G1599_Z),
+	.C(G2568_c),
+	.D(G2567_c),
+	.Y(un1_G2207_Z)
+);
+defparam un1_G2207.INIT=16'h9669;
+// @6:872
+  CFG2 G1884_29 (
+	.A(G1884_24_Z),
+	.B(G1884_25_Z),
+	.Y(G1884_29_Z)
+);
+defparam G1884_29.INIT=4'h8;
+// @6:1210
+  CFG4 G2466 (
+	.A(un1_G530_1_Z[0]),
+	.B(un1_G527_1_Z[0]),
+	.C(G2466_1_Z),
+	.D(G1008),
+	.Y(G2466_Z)
+);
+defparam G2466.INIT=16'h80A0;
+// @6:1251
+  CFG4 G2528_3 (
+	.A(G2583_c),
+	.B(G2582_c),
+	.C(G1802_Z),
+	.D(G993_Z),
+	.Y(G2528_3_Z)
+);
+defparam G2528_3.INIT=16'h0010;
+// @6:1185
+  CFG4 G2425 (
+	.A(G2425_0_Z),
+	.B(G2424_2_Z),
+	.C(G1409_Z),
+	.D(G134_c),
+	.Y(G2425_Z)
+);
+defparam G2425.INIT=16'h0080;
+// @6:1184
+  CFG4 G2424 (
+	.A(G2424_2_Z),
+	.B(G1409_Z),
+	.C(G1062),
+	.D(G135_c),
+	.Y(G2424_Z)
+);
+defparam G2424.INIT=16'h0008;
+// @6:1215
+  CFG4 G2475_0 (
+	.A(un1_G533_Z[0]),
+	.B(un1_G527_1_Z[0]),
+	.C(G2566_c),
+	.D(G1008),
+	.Y(G2475_0_Z)
+);
+defparam G2475_0.INIT=16'hA0E8;
+// @6:1218
+  CFG3 G2478_0 (
+	.A(G2427_2_Z),
+	.B(G2231_Z),
+	.C(G1903_Z),
+	.Y(G2478_0_Z)
+);
+defparam G2478_0.INIT=8'h82;
+// @6:1315
+  CFG3 \un1_G2206[0]  (
+	.A(un1_G1858_Z),
+	.B(G998),
+	.C(G122_c),
+	.Y(un1_G2206_Z[0])
+);
+defparam \un1_G2206[0] .INIT=8'hC9;
+// @6:1241
+  CFG4 G2505_2 (
+	.A(G2424_Z),
+	.B(G2423_Z),
+	.C(G2023_Z),
+	.D(G1072),
+	.Y(G2505_2_Z)
+);
+defparam G2505_2.INIT=16'hFEEE;
+// @6:1137
+  CFG4 G2337 (
+	.A(un1_G1964_Z),
+	.B(un1_G1467_Z),
+	.C(G1053),
+	.D(G29_c),
+	.Y(G2337_Z)
+);
+defparam G2337.INIT=16'hFF69;
+// @6:1212
+  CFG3 G2470 (
+	.A(un1_G2207_Z),
+	.B(un1_G2044_Z),
+	.C(G29_c),
+	.Y(G2470_Z)
+);
+defparam G2470.INIT=8'hF6;
+  CFG4 G1884_26_RNII8901 (
+	.A(G1884_29_Z),
+	.B(G1884_28_Z),
+	.C(G1884_27_Z),
+	.D(G1884_26_Z),
+	.Y(G1884_i)
+);
+defparam G1884_26_RNII8901.INIT=16'h7FFF;
+// @6:1232
+  CFG4 G2492_0 (
+	.A(G2478_1_Z),
+	.B(G2427_2_Z),
+	.C(G2231_Z),
+	.D(G1903_Z),
+	.Y(G2492_0_Z)
+);
+defparam G2492_0.INIT=16'h80C8;
+// @6:1219
+  CFG4 G2479 (
+	.A(un1_G2403_Z),
+	.B(un1_G539_1_Z[0]),
+	.C(G2567_c),
+	.D(G2478_0_Z),
+	.Y(G2479_Z)
+);
+defparam G2479.INIT=16'h4000;
+// @6:1315
+  CFG4 \un1_G998_2[0]  (
+	.A(un1_G2209_Z),
+	.B(un1_G2044_Z),
+	.C(G998),
+	.D(G123_c),
+	.Y(un1_G998_2_Z[0])
+);
+defparam \un1_G998_2[0] .INIT=16'h99F0;
+// @6:1226
+  CFG4 G2486 (
+	.A(un1_G2403_Z),
+	.B(G2486_0_Z),
+	.C(G2475_0_Z),
+	.D(G2466_Z),
+	.Y(G2486_Z)
+);
+defparam G2486.INIT=16'h4440;
+  CFG3 G2528_3_RNIKNSC (
+	.A(G2528_3_Z),
+	.B(G2470_Z),
+	.C(G2337_Z),
+	.Y(G2528_i)
+);
+defparam G2528_3_RNIKNSC.INIT=8'h7F;
+// @6:1232
+  CFG4 G2492 (
+	.A(G2492_1_Z),
+	.B(G2492_0_Z),
+	.C(G2486_Z),
+	.D(G2479_Z),
+	.Y(G2492_Z)
+);
+defparam G2492.INIT=16'hFFFE;
+// @6:1236
+  CFG3 G2500 (
+	.A(G2500_1_Z),
+	.B(G2492_Z),
+	.C(G2424_2_Z),
+	.Y(G2500_Z)
+);
+defparam G2500.INIT=8'h80;
+  CFG3 G2591_obuf_RNO (
+	.A(G2505_2_Z),
+	.B(G2500_Z),
+	.C(G2425_Z),
+	.Y(G2505_i)
+);
+defparam G2591_obuf_RNO.INIT=8'h01;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* c2670 */
+
