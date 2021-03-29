@@ -9,3 +9,5 @@ if __name__ == "__main__":
     graph.construct()
     # Simulate the graph
     graph.simulate()
+    # Simulate the TMR approach
+    graph.TMRApproach()

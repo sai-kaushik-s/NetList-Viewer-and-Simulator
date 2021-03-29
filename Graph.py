@@ -40,9 +40,9 @@ class Graph:
             '\x1b[0;36;49m' + "Enter the path for the .vm file: " + '\x1b[0m')
         self.graph = nx.MultiDiGraph()
         # Parse the given file and get the data
-        self.dataTypes, self.modules, self.defparam, self.ari1 = self.parse()
+        self.dataTypes, self.modules, self.defparam, self.ari1 = self.__parse()
 
-    def parse(self):
+    def __parse(self):
         """
         A function to parse the input vm file and return the data types, modules, defparams and ari blocks as dictionaries
         """
@@ -144,7 +144,7 @@ class Graph:
         # Return the data
         return dataTypes, modules, defparam, ari1
 
-    def findNode(self, current):
+    def __findNode(self, current):
         """
         A function that return the module which generates current as the output
         and the color to distinguish the multiple outputs from ARI1 modules
@@ -167,6 +167,26 @@ class Graph:
             elif current == j[2]:
                 return i, 'green'
 
+    def __drawGraph(self, fileName):
+        # Get the attributes of the graph and plot it
+        pos = nx.get_node_attributes(self.graph, 'pos')
+        color = list(nx.get_node_attributes(self.graph, 'color').values())
+        size = list(nx.get_node_attributes(self.graph, 'size').values())
+        graphDict = nx.to_dict_of_lists(self.graph)
+
+        print('\x1b[0;31;49m' + "\nConstructing the graph...\n" + '\x1b[0m')
+
+        nx.draw(self.graph, pos, node_color=color,
+                with_labels=True, font_size=24, node_size=size)
+        outputPath = 'Output/' + fileName + '.png'
+        plt.savefig(outputPath)
+        print('\x1b[1;32;49m' + "The graph as a adjacency list:" + '\x1b[0m')
+        for x, y in graphDict.items():
+            print('\x1b[0;34;49m' + x + '\x1b[0m', end=": ")
+            print(y)
+        print('\x1b[0;33;49m' +
+              f"\nThe graph is stored as an image at {outputPath}." + '\x1b[0m')
+
     def construct(self):
         """
         A function that constructs and draws the graph from the parsed vm file
@@ -174,51 +194,38 @@ class Graph:
         plt.figure(figsize=(100, 200))
         moduleKeys = list(self.modules.keys())
         ibuf, obuf, cfg = 0, 0, 0
-        colorMap = []
-        nodeSize = []
         # Add the input data types to the graph
         for i in range(len(self.dataTypes["input"])):
-            self.graph.add_node(self.dataTypes["input"][i], pos=(0, -10*i))
-            colorMap.append('blue')
-            nodeSize.append(5000)
+            self.graph.add_node(
+                self.dataTypes["input"][i], pos=(0, -10*i), color='blue', size=5000)
         # Add the output data types to the graph
         for i in range(len(self.dataTypes["output"])):
-            self.graph.add_node(self.dataTypes["output"][i], pos=(50, -10*i))
-            colorMap.append('green')
-            nodeSize.append(5000)
+            self.graph.add_node(
+                self.dataTypes["output"][i], pos=(50, -10*i), color='green', size=5000)
         for i in range(len(moduleKeys)):
             # Add the INBUF modules to the graph
             if moduleKeys[i].endswith("ibuf"):
-                self.graph.add_node(moduleKeys[i], pos=(10, -10*ibuf))
+                self.graph.add_node(moduleKeys[i], pos=(
+                    10, -10*ibuf), color='red', size=20000)
                 ibuf += 1
-                colorMap.append('red')
-                nodeSize.append(20000)
             # Add the OUTBUF modules to the graph
             elif moduleKeys[i].endswith("obuf"):
-                self.graph.add_node(moduleKeys[i], pos=(40, -10*obuf))
+                self.graph.add_node(moduleKeys[i], pos=(
+                    40, -10*obuf), color='yellow', size=20000)
                 obuf += 1
-                colorMap.append('yellow')
-                nodeSize.append(20000)
             # Add the TRIBUFF / CFG1 / CFG2 / CFG3 / CFG4 modules to the graph
             else:
-                self.graph.add_node(moduleKeys[i], pos=(30, -10*cfg))
+                self.graph.add_node(moduleKeys[i], pos=(
+                    30, -10*cfg), color='orange', size=60000)
                 cfg += 1
-                colorMap.append('orange')
-                nodeSize.append(60000)
         # Add the ARI1 modules to the graph
         x = 0
         for i in self.ari1.keys():
-            self.graph.add_node(i, pos=(20, -10*x))
+            self.graph.add_node(i, pos=(20, -10*x), color='orange', size=60000)
             x += 1
-            colorMap.append('orange')
-            nodeSize.append(60000)
         # Add VCC and GND to the graph
-        self.graph.add_node("GND", pos=(10, 20))
-        colorMap.append('grey')
-        nodeSize.append(5000)
-        self.graph.add_node("VCC", pos=(30, 20))
-        colorMap.append('grey')
-        nodeSize.append(5000)
+        self.graph.add_node("GND", pos=(10, 20), color='grey', size=5000)
+        self.graph.add_node("VCC", pos=(30, 20), color='grey', size=5000)
         # For each INBUF, add an edge
         for i in self.dataTypes["input"]:
             if i+"_ibuf" in moduleKeys:
@@ -240,7 +247,7 @@ class Graph:
                     if y[j] == "GND" or y[j] == "VCC":
                         self.graph.add_edge(y[j], x, color='black')
                     else:
-                        node, color = self.findNode(y[j])
+                        node, color = self.__findNode(y[j])
                         self.graph.add_edge(node, x, color=color)
         # For ARI1 modules
         for x, y in self.ari1.items():
@@ -248,24 +255,10 @@ class Graph:
                 if y[j] == "GND" or y[j] == "VCC":
                     self.graph.add_edge(y[j], x)
                 else:
-                    node, color = self.findNode(y[j])
+                    node, color = self.__findNode(y[j])
                     self.graph.add_edge(node, x, color=color)
-        # Get the attributes of the graph and plot it
-        pos = nx.get_node_attributes(self.graph, 'pos')
-        graphDict = nx.to_dict_of_lists(self.graph)
-
-        print('\x1b[0;31;49m' + "\nConstructing the graph...\n" + '\x1b[0m')
-        nx.draw(self.graph, pos, node_color=colorMap,
-                with_labels=True, font_size=24, node_size=nodeSize)
-        outputPath = 'Output/' + \
-            os.path.splitext(os.path.basename(self.filePath))[0]+'.png'
-        plt.savefig(outputPath)
-        print('\x1b[1;32;49m' + "The graph as a adjacency list:" + '\x1b[0m')
-        for x, y in graphDict.items():
-            print('\x1b[0;34;49m' + x + '\x1b[0m', end=": ")
-            print(y)
-        print('\x1b[0;33;49m' +
-              f"\nThe graph is stored as an image at {outputPath}." + '\x1b[0m')
+        # Draw the graph on the plt canvas
+        self.__drawGraph(os.path.splitext(os.path.basename(self.filePath))[0])
 
     def simulate(self):
         """
@@ -382,3 +375,97 @@ class Graph:
             print('\x1b[0;35;49m' + i + '\x1b[0m', end=": ")
             print(j)
         print()
+
+    def TMRApproach(self):
+        """
+        A function that simulates the triple mode redundancy (TMR) approach
+        """
+        plt.clf()
+        inputNodes = list(input(
+            '\x1b[0;36;49m' + "Enter the nodes to be duplicated(seperated by a space): " + '\x1b[0m').strip().split())
+        pos = nx.get_node_attributes(self.graph, 'pos')
+        orIdx = 0
+        andIdx = 0
+        # For each input module
+        for node in inputNodes:
+            # If the input is not a module, raise an exception
+            if node not in list(self.modules.keys()) + list(self.ari1.keys()):
+                raise ValueError("Module not in the file.")
+            # If the input is a module
+            else:
+                # Retrive the in edges and out edges on the node
+                inEdges = self.graph.in_edges(node, data=True)
+                inData = []
+                for src, dest, data in inEdges:
+                    inData.append((src, dest, data))
+                outEdges = self.graph.out_edges(node, data=True)
+                outData = []
+                for src, dest, data in outEdges:
+                    outData.append((src, dest, data))
+                currPos = pos[node]
+                andGate1 = "and"+str(andIdx)
+                andGate2 = "and"+str(andIdx+1)
+                andGate3 = "and"+str(andIdx+2)
+                orGate = "or"+str(orIdx)
+                # Update the positions of the modules
+                for mod, position in pos.items():
+                    if currPos[0] == position[0] and currPos[1] > position[1]:
+                        pos[mod] = (position[0], position[1]-20)
+                nx.set_node_attributes(self.graph, pos, 'pos')
+                # Remove the current node
+                self.graph.remove_node(node)
+                # Add the new three nodes of the module
+                self.graph.add_node(
+                    node+"_0", pos=(currPos[0], currPos[1]), color='magenta', size=60000)
+                self.graph.add_node(
+                    node+"_1", pos=(currPos[0], currPos[1]-10), color='magenta', size=60000)
+                self.graph.add_node(
+                    node+"_2", pos=(currPos[0], currPos[1]-20), color='magenta', size=60000)
+                # Add the AND and OR gates
+                self.graph.add_node(
+                    andGate1, pos=(currPos[0]+5, currPos[1]), color='beige', size=30000)
+                self.graph.add_node(
+                    andGate2, pos=(currPos[0]+5, currPos[1]-10), color='beige', size=30000)
+                self.graph.add_node(
+                    andGate3, pos=(currPos[0]+5, currPos[1]-20), color='beige', size=30000)
+                self.graph.add_node(
+                    orGate, pos=(currPos[0]+8, currPos[1]-10), color='cyan', size=30000)
+                # For each in edge
+                for src, dest, data in inData:
+                    # Duplicates the edges to all the three nodes
+                    self.graph.add_edge(
+                        src, node+"_0", weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        src, node+"_1", weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        src, node+"_2", weight=data["weight"], color=data["color"])
+                # For each out edge
+                for src, dest, data in outData:
+                    # Pass the node outputs to the AND gates
+                    self.graph.add_edge(
+                        node+"_0", andGate1, weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        node+"_1", andGate1, weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        node+"_1", andGate2, weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        node+"_2", andGate2, weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        node+"_2", andGate3, weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        node+"_0", andGate3, weight=data["weight"], color=data["color"])
+                    # Pass the AND gate outputs to the OR gate
+                    self.graph.add_edge(
+                        andGate1, orGate, weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        andGate2, orGate, weight=data["weight"], color=data["color"])
+                    self.graph.add_edge(
+                        andGate3, orGate, weight=data["weight"], color=data["color"])
+                    # Pass the OR gate output to the destination
+                    self.graph.add_edge(
+                        orGate, dest, weight=data["weight"], color=data["color"])
+                orIdx += 1
+                andIdx += 3
+        # Draw the graph on the plt canvas
+        self.__drawGraph(os.path.splitext(
+            os.path.basename(self.filePath))[0]+"_TMR")
