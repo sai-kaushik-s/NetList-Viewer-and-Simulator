@@ -7,6 +7,12 @@ from matplotlib import pyplot as plt
 def getG(inp, f0, f1):
     """
     Get the output G in the ARI block which is determined by the init[16] and init[17]
+    Input:
+    - inp: INIT[16:17]
+    - f0: Output when A = 0
+    - f1: Output when A = 1
+    Output:
+    - returns G
     """
     if inp == "00":
         return 0
@@ -21,6 +27,11 @@ def getG(inp, f0, f1):
 def getP(inp, y):
     """
     Get the output P in the ARI block which is determined by the init[18] and init[19]
+    Input:
+    - inp: INIT[18:19]
+    - y: output Y of the ARI block
+    Output:
+    - returns P
     """
     if inp == "00":
         return 0
@@ -33,6 +44,26 @@ def getP(inp, y):
 class Graph:
     """
     A class for the graph generation and simulation
+
+    Attributes: 
+    - filePath: Path of the input .vm file
+    - graph: MultiDiGraph from the networkx module which supports multiple edges between two nodes 
+        and it is a directed graph
+    - dataType: The input, output and wire instances
+    - modules: The INBUF, OUTBUF, TRIBUFF, CFG1, CFG2, CFG3, CFG4 modules with inputs and outputs
+    - defparams: The defparams data
+    - ari1: The ARI1 modules with inputs and outputs
+
+    Functions:
+    - Private:
+        - __init__
+        - __parse
+        - __findNode
+        - __drawGraph
+    - Public:
+        - construct
+        - simulate
+        - TMRApproach
     """
 
     def __init__(self):
@@ -44,7 +75,12 @@ class Graph:
 
     def __parse(self):
         """
-        A function to parse the input vm file and return the data types, modules, defparams and ari blocks as dictionaries
+        A function to parse the input vm file
+        Output:
+        - dataType: The input, output and wire instances
+        - modules: The INBUF, OUTBUF, TRIBUFF, CFG1, CFG2, CFG3, CFG4 modules with inputs and outputs
+        - defparams: The defparams data
+        - ari1: The ARI1 modules with inputs and outputs
         """
         with open(self.filePath, "r") as fp:
             fileData = fp.readlines()
@@ -146,8 +182,16 @@ class Graph:
 
     def __findNode(self, current):
         """
-        A function that return the module which generates current as the output
-        and the color to distinguish the multiple outputs from ARI1 modules
+        A function that finds the node where the output is generated
+        Input:
+        - current: The input port of some module
+        Output:
+        - i: The module where current is an output
+        - color: The color to differentiate the output wires of ARI1 block
+            Color Map
+            Red   |  Y
+            Blue  |  D
+            Green |  FCO 
         """
         # Looping through the CFG1 / CG2 / CFG3 / CFG4 / INBUF / OUTBUF / TRIBUFF modules
         # Output for these modules is at index 0
@@ -168,6 +212,11 @@ class Graph:
                 return i, 'green'
 
     def __drawGraph(self, fileName):
+        """
+        A function to draw the graph on the canvas
+        Input
+        - fileName: Output file name
+        """
         # Get the attributes of the graph and plot it
         pos = nx.get_node_attributes(self.graph, 'pos')
         color = list(nx.get_node_attributes(self.graph, 'color').values())
