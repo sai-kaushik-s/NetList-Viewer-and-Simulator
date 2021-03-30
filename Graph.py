@@ -364,12 +364,13 @@ class Graph:
                         self.graph[i][k][0]["weight"] = bNum1[int(x, 2)]
                 # If it is ARI1 module
                 elif i in self.ari1.keys():
-                    # bNum1: init[15:0]
+                    # bNum1: init[0:15]
                     # bNum2: init[17:16]
                     # bNum3: init[19:18]
-                    bNum1 = bin(int(y[2][4:], 16))[2:].zfill(16)[::-1]
-                    bNum2 = bin(int(y[2][2:4], 16))[2:].zfill(2)[::-1]
-                    bNum3 = bin(int(y[2][:2], 16))[2:].zfill(2)[::-1]
+                    bNum = bin(int(y[2], 16))[2:].zfill(y[0])
+                    bNum1 = bNum[4:][::-1]
+                    bNum2 = bNum[2:4]
+                    bNum3 = bNum[:2]
                     x = ""
                     # Get the index for retriving the output
                     try:
@@ -377,6 +378,7 @@ class Graph:
                             x += str(data['weight'])
                     except:
                         continue
+                    x = x[::-1]
                     # Get the adcb, fc1, dcb
                     adcb = x[:4]
                     fci = x[4]
